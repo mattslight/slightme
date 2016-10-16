@@ -1,0 +1,5 @@
+PS1='\h:\W \u\$'
+alias ls='ls -G'
+alias ll='ls -lh'
+alias l='ls -lah'
+alias la='ls -a'
