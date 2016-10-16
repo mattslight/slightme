@@ -1,2 +1,5 @@
-mysql_backups/
+mysql_backups
 .ssh/
+.bashrc
+.bash_profile
+.bash_history
