@@ -10978,6 +10978,8 @@ label.label-muted {
 	margin-right: 5px;
 }
 
+/* DISABLED TO INHERIT STANDARD 50px margin-bottom
+--------------------------------------------------
 form .col_full,
 form .col_half,
 form .col_one_third,
@@ -10990,7 +10992,7 @@ form .col_three_fifth,
 form .col_four_fifth,
 form .col_one_sixth,
 form .col_five_sixth { margin-bottom: 25px; }
-
+*/
 
 /* ----------------------------------------------------------------
 	Contact Form

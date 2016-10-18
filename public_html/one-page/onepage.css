@@ -433,6 +433,17 @@ body.side-panel-left.side-push-panel.side-panel-open.stretched #header .containe
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* form control style mods */
+.altbfc .border-form-control {
+	padding: 0px;
+	font-weight: 300;
+	color: #aaa;
+}
+
+.col_one_third.altbfc {
+	margin-bottom: 0px !important;
+}
+
 .border-form-control::-moz-placeholder { font-weight: 300; }
 .border-form-control:-ms-input-placeholder { font-weight: 300; }
 .border-form-control::-webkit-input-placeholder { font-weight: 300; }

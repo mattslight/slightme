@@ -74,11 +74,11 @@
 .radio-style:checked + .radio-style-3-label:before {
 	content: "\e116";
 	font-family: 'lined-icons';
-	background: #1ABC9C;
+	background: #1ABC9C !important;
 	color: #FFF;
 }
 .radio-style:checked + .radio-style-3-label:before {
-	color: #BBB;
+	color: #FFF;
 	background-color: transparent;
 }
 
