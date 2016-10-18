@@ -6658,6 +6658,7 @@ body:not(.device-touch) .button {
 	font-size: 16px;
 	height: 46px;
 	line-height: 46px;
+	margin: 0px 10px;
 }
 
 .button.button-xlarge {
