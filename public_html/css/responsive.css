@@ -335,7 +335,7 @@
 	.header-extras { display: none; }
 
 	#logo {
-		display: block;
+		display: table;
 		height: 100px;
 		float: none;
 		margin: 0 auto 0 !important;
@@ -344,8 +344,6 @@
 		border: 0 !important;
 		padding: 0 !important;
 	}
-
-	#logo a.standard-logo { display: inline-block; }
 
 	#primary-menu {
 		display: block;

@@ -1003,7 +1003,7 @@ body.stretched #header.full-header .container {
 	display: table;
 	float: left;
 	font-family: 'Helvetica Neue', sans-serif;
-	font-size: 32px;
+	font-size: 28px;
 	line-height: 100%;
 	margin-right: 40px;
 	height: 70px;
@@ -3493,6 +3493,34 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 
 #page-title.page-title-video .video-wrap video { width: 100%; }
 
+/* ----------------------
+	Top Section
+-------------------------*/
+
+@media (max-width: 479px) {
+	  .section-title {
+	padding: 30px 0;
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .section-title {
+	padding: 75px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-title {
+	padding: 120px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-title {
+	padding: 200px 0;
+  }
+}
 
 /* ----------------------------------------------------------------
 	Content
@@ -9775,7 +9803,6 @@ body:not(.device-touch) .clients-grid li a {
 .section > .testimonial .testi-meta,
 .section > .testimonial .testi-meta span { font-size: 14px; }
 
-
 /* Testimonial - Pagination
 -----------------------------------------------------------------*/
 
@@ -9820,6 +9847,8 @@ body:not(.device-touch) .clients-grid li a {
 	display: inline-block;
 	float: none;
 }
+
+
 
 
 /* ----------------------------------------------------------------
