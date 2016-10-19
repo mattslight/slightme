@@ -5,8 +5,6 @@
 -----------------------------------------------------------------*/
 
 
-body,
-small,
 #primary-menu ul ul li > a,
 .wp-caption,
 .feature-box.fbox-center.fbox-italic p,
@@ -16,15 +14,12 @@ small,
 .entry-meta li,
 .entry-link span,
 .entry blockquote p,
-.more-link,
 .comment-content .comment-author span,
 .button.button-desc span,
 .testi-content p,
 .team-title span,
 .before-heading,
-.wedding-head .first-name span,
-.wedding-head .last-name span,
-.font-secondary { font-family: 'Roboto', sans-serif; }
+.font-secondary { font-family: 'Playfair Display', serif; }
 
 h1,
 h2,
@@ -32,6 +27,8 @@ h3,
 h4,
 h5,
 h6,
+body,
+small,
 #logo,
 #primary-menu ul li > a,
 #primary-menu ul li .mega-menu-content.style-2 ul.mega-menu-column > li.mega-menu-title > a,
@@ -41,9 +38,8 @@ h6,
 .button.button-desc,
 .counter,
 label,
+.more-link,
 .nav-tree li a,
-.wedding-head .first-name,
-.wedding-head .last-name,
-.font-primary { font-family: 'Source Sans Pro', sans-serif; }
+.font-primary { font-family: 'Helvetica Neve', sans-serif; }
 
 
