@@ -1000,11 +1000,25 @@ body.stretched #header.full-header .container {
 
 #logo {
 	position: relative;
+	display: table;
 	float: left;
-	font-family: 'Raleway', sans-serif;
-	font-size: 36px;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 32px;
 	line-height: 100%;
 	margin-right: 40px;
+	height: 70px;
+	color: #333;
+}
+#logo span {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#logo a {
+	color: #555 !important;
+}
+#logo a:hover {
+	color: #555 !important;
 }
 
 #header.full-header #logo {
@@ -1014,21 +1028,6 @@ body.stretched #header.full-header .container {
 }
 
 #header.transparent-header.full-header #logo { border-right-color: rgba(0,0,0,0.1); }
-
-#logo a {
-	display: block;
-	color: #000;
-}
-
-#logo img {
-	display: block;
-	max-width: 100%;
-}
-
-#logo a.standard-logo { display: block; }
-
-#logo a.retina-logo { display: none; }
-
 
 /* ----------------------------------------------------------------
 	Header Right Area
