@@ -477,6 +477,10 @@ span.middot {
 	-ms-filter: brightness(100%) grayscale(0);
 }
 
+.em, .italic {
+	font-style: italic !important;
+}
+
 /* MOVING BG -  TESTIMONIALS */
 .bganimate {
 	-webkit-animation:BgAnimated 30s infinite linear;
@@ -1020,6 +1024,11 @@ body.stretched #header.full-header .container {
 #logo a:hover {
 	color: #555 !important;
 }
+
+.logo-large {
+	font-family: "Helvetica Neue";
+ 	font-size: 60px;
+ }
 
 #header.full-header #logo {
 	padding-right: 30px;
@@ -5421,7 +5430,6 @@ body:not(.device-touch) .entry-link {
 	display: inline-block;
 	border-bottom: 1px solid #1ABC9C;
 	padding: 0 2px;
-	font-family: 'Crete Round', serif;
 	font-style: italic;
 }
 
@@ -11025,6 +11033,13 @@ form .col_five_sixth { margin-bottom: 25px; }
 	Contact Form
 -----------------------------------------------------------------*/
 
+.title-contact {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 1pt;
+    font-family: 'Playfair Display';
+    font-style: italic;
+}
 
 #contact-form-overlay,
 #contact-form-overlay-mini {
@@ -12197,8 +12212,16 @@ body:not(.device-touch) .tagcloud a {
 
 .subscribe-widget h5 {
 	font-weight: 300;
-	font-size: 14px;
-	line-height: 1.5;
+    font-size: 19px;
+    line-height: 1.5;
+    font-style: : italic;
+    letter-spacing: -0.5px !important;
+    text-shadow: 1px 1px 1px #ddd;
+    display: inline;
+}
+
+.ts {
+	text-shadow: 1px 1px 1px #ddd;
 }
 
 

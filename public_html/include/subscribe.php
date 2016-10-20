@@ -1,7 +1,7 @@
 <?php
 
-$apiKey = ''; // Your MailChimp API Key
-$listId = ''; // Your MailChimp List ID
+$apiKey = '2878ea2d76a4bea1e3001a3fb58263ab-us14'; // Your MailChimp API Key
+$listId = '51c285959e'; // Your MailChimp List ID
 
 if( isset( $_GET['list'] ) AND $_GET['list'] != '' ) {
 	$listId = $_GET['list'];
@@ -48,7 +48,7 @@ if( isset( $email ) AND $email != '' ) {
 	$data = json_decode($result);
 
 	if ( isset( $data->status ) AND $data->status == 'subscribed' ){
-		echo '{ "alert": "success", "message": "You have been <strong>successfully</strong> subscribed to our Email List." }';
+		echo '{ "alert": "success", "message": "Thank you for your interest. Please check your email to <strong>download</strong> our whitepaper. Please also check your junk / spam." }';
 	} else {
 		echo '{ "alert": "error", "message": "' . $data->title . '" }';
 	}
