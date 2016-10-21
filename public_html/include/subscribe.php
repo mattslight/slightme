@@ -1,6 +1,6 @@
 <?php
 
-$apiKey = '2878ea2d76a4bea1e3001a3fb58263ab-us14'; // Your MailChimp API Key
+$apiKey = base64_decode('Mjg3OGVhMmQ3NmE0YmVhMWUzMDAxYTNmYjU4MjYzYWItdXMxNA=='); // Your MailChimp API Key
 $listId = '51c285959e'; // Your MailChimp List ID
 
 if( isset( $_GET['list'] ) AND $_GET['list'] != '' ) {
