@@ -11841,7 +11841,7 @@ button.toast-close-button {
 
 .toast { background-color: #030303; }
 
-.toast-success { background-color: #51a351; }
+.toast-success { background-color: #1ABC9C; }
 
 .toast-error { background-color: #bd362f; }
 
@@ -12211,13 +12211,17 @@ body:not(.device-touch) .tagcloud a {
 -----------------------------------------------------------------*/
 
 .subscribe-widget h5 {
-	font-weight: 300;
+    font-weight: 300;
     font-size: 19px;
     line-height: 1.5;
     font-style: : italic;
     letter-spacing: -0.5px !important;
     text-shadow: 1px 1px 1px #ddd;
     display: inline;
+}
+
+.widget-subscribe-form-result {
+    background-color: #1ABC9C;
 }
 
 .ts {
