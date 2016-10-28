@@ -1,8 +1,3 @@
-### General Reference URLs
-1. https://ssl.www8.hp.com/ww/en/secure/pdf/4aa6-7212enw.pdf
-2. https://s3.amazonaws.com/files.dezyre.com/images/blog/Top+6+Hadoop+Vendors+providing+Best+in+Class+Big+Data+Solutions_2.PNG
-3. http://siliconangle.com/files/2016/03/Top-Vendors-1080x675.png
-
 MODERN DATA SCIENCE FOR BUSINESS
 ================================
 *A study of the current business intelligence and related landscapes, prepared by Slight Data Science LLC.*
@@ -15,23 +10,33 @@ Contents
 4. Modern Models and Advantages
 5. The Six Core Business Data Science Competencies
 6. Current Business Landscape
-  1. Big Data & Hadoop
-  2. Open vs. Proprietary
-  3. Python vs. R
-  4. Machine Learning
+    1. Big Data & Hadoop
+    2. Open vs. Proprietary
+    3. Python vs. R
+    4. Machine Learning
 7. Summary
-  1. Practical Application
-  2. Business Implications
-  
+    1. Business Implications
+    2. Practical Application
+ 
 
 1 Executive summary
 -------------------
 
 >> "Data is the Next Intel Inside." ~ Tim O’Reilly 
 
-*omitted*
+This whitepaper provides (a) an overview of the current landscape for applied data science within business, (b) an analysis of the tools & modes of application; and (c) an evaluation of the practical implications available to businesses wishing to conduct data science. In fact we argue that every business should conduct effective data science in order to remain competitive beyond 2020.
 
-**Overview diagram of datascience landscape. Include DW/BI tools mentioned in this document**
+This report provides the historic context of existing data science applications within business, often commonly referred to within organisations as Data-warehousing (DW) (the procurement, sanitization and abstraction) and Business Intelligence (BI) (the analysis, general consumption and presentation of data). We develop the traditional DW/BI model and explain how advances in hardware and software technology provide cost-effective means of disrupting the foundational assumptions of existing data analytics platforms, both from a technical (IT) and business process orientated perspective. We further explore how these advances increase the consumption and computation of data within business, effectively introducing cost-viable ‘Big-Data’ capabilities. We conclude the study by looking at the total impact of this shift on business resourcing requirements.
+
+
+###Recommendations from our team
+
+**Firstly,** it is essential for every business wishing to remain competitive to conduct effective data science and analytics techniques. This applies equally to small businesses and large enterprises. It should include at a minimum analysis of customer behaviour, operational efficiency and optimisation of profits.
+
+**Secondly,** whether developing new business competencies or building on existing ones, the business should include key capabilities in six key defined areas. It is recommended that a minimum level of proficiency be achieved in eachh of those areas in order to effectively achieve a solution which holistically meets the basic needs of a modern business. That is to say that a total deficiency in any one of the six core areas of expertise renders any BI solution potentially not fit for purpose.
+
+**Thirdly,** solutions should be approached from a vendor neutral perspective with additional preference given to ‘open’ platforms. Such an approach ensures the future-proofing of the data science function, allows agile upgrading and minimises the total cost of ownership. It is recommended that proprietary resources and techniques which cause vendor lock-in and provided restricted compability with other modules be avoided where practically possible.
+
 
 2 Rationale of Data Science
 ---------------------------
@@ -177,10 +182,12 @@ Commonly Big Data is implemented using the Hadoop suite of tools, which has the 
 
 Going with a Hadoop based system is usually the reference path, simply because of how the Hadoop suite has become the defacto indsutry standard. By choosing to adopt a Big Data or analytics platform which isn't at a minimum compatible with the main Hadoop components effictively means to become shut off from a vibrant growing ecosystem supported by vast numbers of talented developers, analysts and data scientists. Going back to our car analogy it would also be like running a road car on a combustible fuel that isn't available at the pump, whilst it is possible and may offer some attractive benefits for the vast majority of businesses this would make it's Big Data journey extremely challenging to say the least. Of course, following the trend isn't always the right thing to do.
 
-*Hadoop stack defined image*
+*Figure 1. Hadoop stack defined*
 
 ### Open vs. Proprietary
-Another of the choices faced by companies on their data science journey is whether to embrace open software and technology or adopt a proprietary stack. In the past whilst it has been tempting for companies to consider open-source software it has not always been entirely viable and few companies took the plunge. Datascience however offers a good opportunity to work with open technology across the complete stack including open-source software, open cloud technologies and software defined infrastructure. Common packages within the open data science stack include the Hadoop suite, R Stuido and Python as computational and analytical tools and visualisation and publishing tools commonly built around responsive layout display (D3.js). *Responsive:- content automatically fitting and self-tailored to the screen size on the device displaying it.*
+Another of the choices faced by companies on their data science journey is whether to embrace open software and technology or adopt a proprietary stack. In the past whilst it has been tempting for companies to consider open-source software it has not always been entirely viable and few companies took the plunge. Datascience however offers a good opportunity to work with open technology across the complete stack including open-source software, open cloud technologies and software defined infrastructure. Common packages within the open data science stack include the Hadoop suite, R Stuido and Python as computational and analytical tools and visualisation and publishing tools commonly built around responsive layout display (D3.js).
+
+>> Responsive:- content automatically fitting and self-tailoring layout suited to the screen size of the device displaying it.*
 
 ### Python & R
 Another large software components used with modern data science armory is that of an open and versatile analytical engine built on statistics and mathematics but also encorporating general programming abilities, and designed to work directly with data rather than more generic programming objects. Python & R are popular choices (along with Scala and Java). The business the impact is that of a transition away from propritary statistical and analytical packages such as Excel, SPSS and IBM Rational. 
@@ -231,11 +238,17 @@ The net business impact of everything we have discussed is sumarised in the tabl
 |Law enforcement|Threat analysis, social media monitoring, photo analysis, trac optimization|
 |Advertising|Customer targeting, location-based advertising, personalized retargeting, churn detection/prevention|
 
-**MORE**
+**EXPAND THIS SECTION**
+
+*Vendor landscape / market share summary*
+https://s3.amazonaws.com/files.dezyre.com/images/blog/Top+6+Hadoop+Vendors+providing+Best+in+Class+Big+Data+Solutions_2.PNG
+3. http://siliconangle.com/files/2016/03/Top-Vendors-1080x675.png
 
 9 Summary
 ---------
 
->> "Data matures like wine, applications like fish." ~ James Governor, Founder RedMonk
+>> "Data is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyone claims they are doing it…" ~ Unknown Author
 
-**TODO**
+*Overview diagram of datascience landscape. Include DW/BI tools mentioned in this document*
+
+>> "Data matures like wine, applications like fish." ~ James Governor, Founder RedMonk
