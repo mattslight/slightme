@@ -4,3 +4,6 @@ mysql_backups
 .bash_profile
 .bash_history
 .nanorc
+.DS_Store
+*.DS_Store
+**/.DS_Store
