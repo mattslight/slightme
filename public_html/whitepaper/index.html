@@ -1,1277 +1,670 @@
 <!DOCTYPE html>
 <html>
+  <head>
+      <meta charset="utf-8" />
+      <title>whitepaper</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(197, 200, 198); overflow: auto; background-color: rgb(29, 31, 33); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(155, 160, 157); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(155, 160, 157); border-color: rgb(67, 72, 76); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(67, 72, 76); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(67, 72, 76); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(48, 51, 55); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(39, 41, 44); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(67, 72, 76) rgb(67, 72, 76) rgb(53, 57, 60); background-color: rgb(48, 51, 55); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
 
-	<head>
-		<meta charset="utf-8">
-		<style>
-		body {
-			width: 45em;
-			border: 1px solid #ddd;
-			outline: 1300px solid #fff;
-			margin: 16px auto;
-		}
-		
-		body .markdown-body {
-			padding: 30px;
-		}
-		
-		@font-face {
-			font-family: fontawesome-mini;
-			src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
-		}
-		
-		@font-face {
-			font-family: octicons-anchor;
-			src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
-		}
-		
-		.markdown-body {
-			font-family: sans-serif;
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
-			color: #333333;
-			overflow: hidden;
-			font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-			font-size: 16px;
-			line-height: 1.6;
-			word-wrap: break-word;
-		}
-		
-		.markdown-body a {
-			background: transparent;
-		}
-		
-		.markdown-body a:active,
-		.markdown-body a:hover {
-			outline: 0;
-		}
-		
-		.markdown-body b,
-		.markdown-body strong {
-			font-weight: bold;
-		}
-		
-		.markdown-body mark {
-			background: #ff0;
-			color: #000;
-			font-style: italic;
-			font-weight: bold;
-		}
-		
-		.markdown-body sub,
-		.markdown-body sup {
-			font-size: 75%;
-			line-height: 0;
-			position: relative;
-			vertical-align: baseline;
-		}
-		
-		.markdown-body sup {
-			top: -0.5em;
-		}
-		
-		.markdown-body sub {
-			bottom: -0.25em;
-		}
-		
-		.markdown-body h1 {
-			font-size: 2em;
-			margin: 0.67em 0;
-		}
-		
-		.markdown-body img {
-			border: 0;
-		}
-		
-		.markdown-body hr {
-			-moz-box-sizing: content-box;
-			box-sizing: content-box;
-			height: 0;
-		}
-		
-		.markdown-body pre {
-			overflow: auto;
-		}
-		
-		.markdown-body code,
-		.markdown-body kbd,
-		.markdown-body pre,
-		.markdown-body samp {
-			font-family: monospace, monospace;
-			font-size: 1em;
-		}
-		
-		.markdown-body input {
-			color: inherit;
-			font: inherit;
-			margin: 0;
-		}
-		
-		.markdown-body html input[disabled] {
-			cursor: default;
-		}
-		
-		.markdown-body input {
-			line-height: normal;
-		}
-		
-		.markdown-body input[type="checkbox"] {
-			box-sizing: border-box;
-			padding: 0;
-		}
-		
-		.markdown-body table {
-			border-collapse: collapse;
-			border-spacing: 0;
-		}
-		
-		.markdown-body td,
-		.markdown-body th {
-			padding: 0;
-		}
-		
-		.markdown-body .codehilitetable {
-			border: 0;
-			border-spacing: 0;
-		}
-		
-		.markdown-body .codehilitetable tr {
-			border: 0;
-		}
-		
-		.markdown-body .codehilitetable pre,
-		.markdown-body .codehilitetable div.codehilite {
-			margin: 0;
-		}
-		
-		.markdown-body .linenos,
-		.markdown-body .code,
-		.markdown-body .codehilitetable td {
-			border: 0;
-			padding: 0;
-		}
-		
-		.markdown-body td:not(.linenos) .linenodiv {
-			padding: 0 !important;
-		}
-		
-		.markdown-body .code {
-			width: 100%;
-		}
-		
-		.markdown-body .linenos div pre,
-		.markdown-body .linenodiv pre,
-		.markdown-body .linenodiv {
-			border: 0;
-			-webkit-border-radius: 0;
-			-moz-border-radius: 0;
-			border-radius: 0;
-			-webkit-border-top-left-radius: 3px;
-			-webkit-border-bottom-left-radius: 3px;
-			-moz-border-radius-topleft: 3px;
-			-moz-border-radius-bottomleft: 3px;
-			border-top-left-radius: 3px;
-			border-bottom-left-radius: 3px;
-		}
-		
-		.markdown-body .code div pre,
-		.markdown-body .code div {
-			border: 0;
-			-webkit-border-radius: 0;
-			-moz-border-radius: 0;
-			border-radius: 0;
-			-webkit-border-top-right-radius: 3px;
-			-webkit-border-bottom-right-radius: 3px;
-			-moz-border-radius-topright: 3px;
-			-moz-border-radius-bottomright: 3px;
-			border-top-right-radius: 3px;
-			border-bottom-right-radius: 3px;
-		}
-		
-		.markdown-body * {
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-		
-		.markdown-body input {
-			font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-			line-height: 1.4;
-		}
-		
-		.markdown-body a {
-			color: #4183c4;
-			text-decoration: none;
-		}
-		
-		.markdown-body a:hover,
-		.markdown-body a:focus,
-		.markdown-body a:active {
-			text-decoration: underline;
-		}
-		
-		.markdown-body hr {
-			height: 0;
-			margin: 15px 0;
-			overflow: hidden;
-			background: transparent;
-			border: 0;
-			border-bottom: 1px solid #ddd;
-		}
-		
-		.markdown-body hr:before,
-		.markdown-body hr:after {
-			display: table;
-			content: " ";
-		}
-		
-		.markdown-body hr:after {
-			clear: both;
-		}
-		
-		.markdown-body h1,
-		.markdown-body h2,
-		.markdown-body h3,
-		.markdown-body h4,
-		.markdown-body h5,
-		.markdown-body h6 {
-			margin-top: 15px;
-			margin-bottom: 15px;
-			line-height: 1.1;
-		}
-		
-		.markdown-body h1 {
-			font-size: 30px;
-		}
-		
-		.markdown-body h2 {
-			font-size: 21px;
-		}
-		
-		.markdown-body h3 {
-			font-size: 16px;
-		}
-		
-		.markdown-body h4 {
-			font-size: 14px;
-		}
-		
-		.markdown-body h5 {
-			font-size: 12px;
-		}
-		
-		.markdown-body h6 {
-			font-size: 11px;
-		}
-		
-		.markdown-body blockquote {
-			margin: 0;
-		}
-		
-		.markdown-body ul,
-		.markdown-body ol {
-			padding: 0;
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-		
-		.markdown-body ol ol,
-		.markdown-body ul ol {
-			list-style-type: lower-roman;
-		}
-		
-		.markdown-body ul ul ol,
-		.markdown-body ul ol ol,
-		.markdown-body ol ul ol,
-		.markdown-body ol ol ol {
-			list-style-type: lower-alpha;
-		}
-		
-		.markdown-body dd {
-			margin-left: 0;
-		}
-		
-		.markdown-body code,
-		.markdown-body pre,
-		.markdown-body samp {
-			font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-			font-size: 12px;
-		}
-		
-		.markdown-body pre {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-		
-		.markdown-body kbd {
-			background-color: #e7e7e7;
-			background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
-			background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
-			background-image: linear-gradient(#fefefe, #e7e7e7);
-			background-repeat: repeat-x;
-			border-radius: 2px;
-			border: 1px solid #cfcfcf;
-			color: #000;
-			padding: 3px 5px;
-			line-height: 10px;
-			font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-			display: inline-block;
-		}
-		
-		.markdown-body>*:first-child {
-			margin-top: 0 !important;
-		}
-		
-		.markdown-body>*:last-child {
-			margin-bottom: 0 !important;
-		}
-		
-		.markdown-body .headeranchor-link {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			display: block;
-			padding-right: 6px;
-			padding-left: 30px;
-			margin-left: -30px;
-		}
-		
-		.markdown-body .headeranchor-link:focus {
-			outline: none;
-		}
-		
-		.markdown-body h1,
-		.markdown-body h2,
-		.markdown-body h3,
-		.markdown-body h4,
-		.markdown-body h5,
-		.markdown-body h6 {
-			position: relative;
-			margin-top: 1em;
-			margin-bottom: 16px;
-			font-weight: bold;
-			line-height: 1.4;
-		}
-		
-		.markdown-body h1 .headeranchor,
-		.markdown-body h2 .headeranchor,
-		.markdown-body h3 .headeranchor,
-		.markdown-body h4 .headeranchor,
-		.markdown-body h5 .headeranchor,
-		.markdown-body h6 .headeranchor {
-			display: none;
-			color: #000;
-			vertical-align: middle;
-		}
-		
-		.markdown-body h1:hover .headeranchor-link,
-		.markdown-body h2:hover .headeranchor-link,
-		.markdown-body h3:hover .headeranchor-link,
-		.markdown-body h4:hover .headeranchor-link,
-		.markdown-body h5:hover .headeranchor-link,
-		.markdown-body h6:hover .headeranchor-link {
-			height: 1em;
-			padding-left: 8px;
-			margin-left: -30px;
-			line-height: 1;
-			text-decoration: none;
-		}
-		
-		.markdown-body h1:hover .headeranchor-link .headeranchor,
-		.markdown-body h2:hover .headeranchor-link .headeranchor,
-		.markdown-body h3:hover .headeranchor-link .headeranchor,
-		.markdown-body h4:hover .headeranchor-link .headeranchor,
-		.markdown-body h5:hover .headeranchor-link .headeranchor,
-		.markdown-body h6:hover .headeranchor-link .headeranchor {
-			display: inline-block;
-		}
-		
-		.markdown-body h1 {
-			padding-bottom: 0.3em;
-			font-size: 2.25em;
-			line-height: 1.2;
-			border-bottom: 1px solid #eee;
-		}
-		
-		.markdown-body h2 {
-			padding-bottom: 0.3em;
-			font-size: 1.75em;
-			line-height: 1.225;
-			border-bottom: 1px solid #eee;
-		}
-		
-		.markdown-body h3 {
-			font-size: 1.5em;
-			line-height: 1.43;
-		}
-		
-		.markdown-body h4 {
-			font-size: 1.25em;
-		}
-		
-		.markdown-body h5 {
-			font-size: 1em;
-		}
-		
-		.markdown-body h6 {
-			font-size: 1em;
-			color: #777;
-		}
-		
-		.markdown-body p,
-		.markdown-body blockquote,
-		.markdown-body ul,
-		.markdown-body ol,
-		.markdown-body dl,
-		.markdown-body table,
-		.markdown-body pre,
-		.markdown-body .admonition {
-			margin-top: 0;
-			margin-bottom: 16px;
-		}
-		
-		.markdown-body hr {
-			height: 4px;
-			padding: 0;
-			margin: 16px 0;
-			background-color: #e7e7e7;
-			border: 0 none;
-		}
-		
-		.markdown-body ul,
-		.markdown-body ol {
-			padding-left: 2em;
-		}
-		
-		.markdown-body ul ul,
-		.markdown-body ul ol,
-		.markdown-body ol ol,
-		.markdown-body ol ul {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-		
-		.markdown-body li>p {
-			margin-top: 16px;
-		}
-		
-		.markdown-body dl {
-			padding: 0;
-		}
-		
-		.markdown-body dl dt {
-			padding: 0;
-			margin-top: 16px;
-			font-size: 1em;
-			font-style: italic;
-			font-weight: bold;
-		}
-		
-		.markdown-body dl dd {
-			padding: 0 16px;
-			margin-bottom: 16px;
-		}
-		
-		.markdown-body blockquote {
-			padding: 0 15px;
-			color: #777;
-			border-left: 4px solid #ddd;
-		}
-		
-		.markdown-body blockquote>:first-child {
-			margin-top: 0;
-		}
-		
-		.markdown-body blockquote>:last-child {
-			margin-bottom: 0;
-		}
-		
-		.markdown-body table {
-			display: block;
-			width: 100%;
-			overflow: auto;
-			word-break: normal;
-			word-break: keep-all;
-		}
-		
-		.markdown-body table th {
-			font-weight: bold;
-		}
-		
-		.markdown-body table th,
-		.markdown-body table td {
-			padding: 6px 13px;
-			border: 1px solid #ddd;
-		}
-		
-		.markdown-body table tr {
-			background-color: #fff;
-			border-top: 1px solid #ccc;
-		}
-		
-		.markdown-body table tr:nth-child(2n) {
-			background-color: #f8f8f8;
-		}
-		
-		.markdown-body img {
-			max-width: 100%;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-		
-		.markdown-body code,
-		.markdown-body samp {
-			padding: 0;
-			padding-top: 0.2em;
-			padding-bottom: 0.2em;
-			margin: 0;
-			font-size: 85%;
-			background-color: rgba(0, 0, 0, 0.04);
-			border-radius: 3px;
-		}
-		
-		.markdown-body code:before,
-		.markdown-body code:after {
-			letter-spacing: -0.2em;
-			content: "\00a0";
-		}
-		
-		.markdown-body pre>code {
-			padding: 0;
-			margin: 0;
-			font-size: 100%;
-			word-break: normal;
-			white-space: pre;
-			background: transparent;
-			border: 0;
-		}
-		
-		.markdown-body .codehilite {
-			margin-bottom: 16px;
-		}
-		
-		.markdown-body .codehilite pre,
-		.markdown-body pre {
-			padding: 16px;
-			overflow: auto;
-			font-size: 85%;
-			line-height: 1.45;
-			background-color: #f7f7f7;
-			border-radius: 3px;
-		}
-		
-		.markdown-body .codehilite pre {
-			margin-bottom: 0;
-			word-break: normal;
-		}
-		
-		.markdown-body pre {
-			word-wrap: normal;
-		}
-		
-		.markdown-body pre code {
-			display: inline;
-			max-width: initial;
-			padding: 0;
-			margin: 0;
-			overflow: initial;
-			line-height: inherit;
-			word-wrap: normal;
-			background-color: transparent;
-			border: 0;
-		}
-		
-		.markdown-body pre code:before,
-		.markdown-body pre code:after {
-			content: normal;
-		}
-		/* Admonition */
-		
-		.markdown-body .admonition {
-			-webkit-border-radius: 3px;
-			-moz-border-radius: 3px;
-			position: relative;
-			border-radius: 3px;
-			border: 1px solid #e0e0e0;
-			border-left: 6px solid #333;
-			padding: 10px 10px 10px 30px;
-		}
-		
-		.markdown-body .admonition table {
-			color: #333;
-		}
-		
-		.markdown-body .admonition p {
-			padding: 0;
-		}
-		
-		.markdown-body .admonition-title {
-			font-weight: bold;
-			margin: 0;
-		}
-		
-		.markdown-body .admonition>.admonition-title {
-			color: #333;
-		}
-		
-		.markdown-body .attention>.admonition-title {
-			color: #a6d796;
-		}
-		
-		.markdown-body .caution>.admonition-title {
-			color: #d7a796;
-		}
-		
-		.markdown-body .hint>.admonition-title {
-			color: #96c6d7;
-		}
-		
-		.markdown-body .danger>.admonition-title {
-			color: #c25f77;
-		}
-		
-		.markdown-body .question>.admonition-title {
-			color: #96a6d7;
-		}
-		
-		.markdown-body .note>.admonition-title {
-			color: #d7c896;
-		}
-		
-		.markdown-body .admonition:before,
-		.markdown-body .attention:before,
-		.markdown-body .caution:before,
-		.markdown-body .hint:before,
-		.markdown-body .danger:before,
-		.markdown-body .question:before,
-		.markdown-body .note:before {
-			font: normal normal 16px fontawesome-mini;
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-			line-height: 1.5;
-			color: #333;
-			position: absolute;
-			left: 0;
-			top: 0;
-			padding-top: 10px;
-			padding-left: 10px;
-		}
-		
-		.markdown-body .admonition:before {
-			content: "\f056\00a0";
-			color: 333;
-		}
-		
-		.markdown-body .attention:before {
-			content: "\f058\00a0";
-			color: #a6d796;
-		}
-		
-		.markdown-body .caution:before {
-			content: "\f06a\00a0";
-			color: #d7a796;
-		}
-		
-		.markdown-body .hint:before {
-			content: "\f05a\00a0";
-			color: #96c6d7;
-		}
-		
-		.markdown-body .danger:before {
-			content: "\f057\00a0";
-			color: #c25f77;
-		}
-		
-		.markdown-body .question:before {
-			content: "\f059\00a0";
-			color: #96a6d7;
-		}
-		
-		.markdown-body .note:before {
-			content: "\f040\00a0";
-			color: #d7c896;
-		}
-		
-		.markdown-body .admonition::after {
-			content: normal;
-		}
-		
-		.markdown-body .attention {
-			border-left: 6px solid #a6d796;
-		}
-		
-		.markdown-body .caution {
-			border-left: 6px solid #d7a796;
-		}
-		
-		.markdown-body .hint {
-			border-left: 6px solid #96c6d7;
-		}
-		
-		.markdown-body .danger {
-			border-left: 6px solid #c25f77;
-		}
-		
-		.markdown-body .question {
-			border-left: 6px solid #96a6d7;
-		}
-		
-		.markdown-body .note {
-			border-left: 6px solid #d7c896;
-		}
-		
-		.markdown-body .admonition>*:first-child {
-			margin-top: 0 !important;
-		}
-		
-		.markdown-body .admonition>*:last-child {
-			margin-bottom: 0 !important;
-		}
-		/* progress bar*/
-		
-		.markdown-body .progress {
-			display: block;
-			width: 300px;
-			margin: 10px 0;
-			height: 24px;
-			-webkit-border-radius: 3px;
-			-moz-border-radius: 3px;
-			border-radius: 3px;
-			background-color: #ededed;
-			position: relative;
-			box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
-		}
-		
-		.markdown-body .progress-label {
-			position: absolute;
-			text-align: center;
-			font-weight: bold;
-			width: 100%;
-			margin: 0;
-			line-height: 24px;
-			color: #333;
-			text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
-			-webkit-font-smoothing: antialiased !important;
-			white-space: nowrap;
-			overflow: hidden;
-		}
-		
-		.markdown-body .progress-bar {
-			height: 24px;
-			float: left;
-			-webkit-border-radius: 3px;
-			-moz-border-radius: 3px;
-			border-radius: 3px;
-			background-color: #96c6d7;
-			box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
-			background-size: 30px 30px;
-			background-image: -webkit-linear-gradient( 135deg, rgba(255, 255, 255, .4) 27%, transparent 27%, transparent 52%, rgba(255, 255, 255, .4) 52%, rgba(255, 255, 255, .4) 77%, transparent 77%, transparent);
-			background-image: -moz-linear-gradient( 135deg, rgba(255, 255, 255, .4) 27%, transparent 27%, transparent 52%, rgba(255, 255, 255, .4) 52%, rgba(255, 255, 255, .4) 77%, transparent 77%, transparent);
-			background-image: -ms-linear-gradient( 135deg, rgba(255, 255, 255, .4) 27%, transparent 27%, transparent 52%, rgba(255, 255, 255, .4) 52%, rgba(255, 255, 255, .4) 77%, transparent 77%, transparent);
-			background-image: -o-linear-gradient( 135deg, rgba(255, 255, 255, .4) 27%, transparent 27%, transparent 52%, rgba(255, 255, 255, .4) 52%, rgba(255, 255, 255, .4) 77%, transparent 77%, transparent);
-			background-image: linear-gradient( 135deg, rgba(255, 255, 255, .4) 27%, transparent 27%, transparent 52%, rgba(255, 255, 255, .4) 52%, rgba(255, 255, 255, .4) 77%, transparent 77%, transparent);
-		}
-		
-		.markdown-body .progress-100plus .progress-bar {
-			background-color: #a6d796;
-		}
-		
-		.markdown-body .progress-80plus .progress-bar {
-			background-color: #c6d796;
-		}
-		
-		.markdown-body .progress-60plus .progress-bar {
-			background-color: #d7c896;
-		}
-		
-		.markdown-body .progress-40plus .progress-bar {
-			background-color: #d7a796;
-		}
-		
-		.markdown-body .progress-20plus .progress-bar {
-			background-color: #d796a6;
-		}
-		
-		.markdown-body .progress-0plus .progress-bar {
-			background-color: #c25f77;
-		}
-		
-		.markdown-body .candystripe-animate .progress-bar {
-			-webkit-animation: animate-stripes 3s linear infinite;
-			-moz-animation: animate-stripes 3s linear infinite;
-			animation: animate-stripes 3s linear infinite;
-		}
-		
-		@-webkit-keyframes animate-stripes {
-			0% {
-				background-position: 0 0;
-			}
-			100% {
-				background-position: 60px 0;
-			}
-		}
-		
-		@-moz-keyframes animate-stripes {
-			0% {
-				background-position: 0 0;
-			}
-			100% {
-				background-position: 60px 0;
-			}
-		}
-		
-		@keyframes animate-stripes {
-			0% {
-				background-position: 0 0;
-			}
-			100% {
-				background-position: 60px 0;
-			}
-		}
-		
-		.markdown-body .gloss .progress-bar {
-			box-shadow: inset 0 4px 12px rgba(255, 255, 255, .7), inset 0 -12px 0 rgba(0, 0, 0, .05);
-		}
-		/* Multimarkdown Critic Blocks */
-		
-		.markdown-body .critic_mark {
-			background: #ff0;
-		}
-		
-		.markdown-body .critic_delete {
-			color: #c82829;
-			text-decoration: line-through;
-		}
-		
-		.markdown-body .critic_insert {
-			color: #718c00;
-			text-decoration: underline;
-		}
-		
-		.markdown-body .critic_comment {
-			color: #8e908c;
-			font-style: italic;
-		}
-		
-		.markdown-body .headeranchor {
-			font: normal normal 16px octicons-anchor;
-			line-height: 1;
-			display: inline-block;
-			text-decoration: none;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-		}
-		
-		.headeranchor:before {
-			content: '\f05c';
-		}
-		
-		.markdown-body .task-list-item {
-			list-style-type: none;
-		}
-		
-		.markdown-body .task-list-item+.task-list-item {
-			margin-top: 3px;
-		}
-		
-		.markdown-body .task-list-item input {
-			margin: 0 4px 0.25em -20px;
-			vertical-align: middle;
-		}
-		/* Media */
-		
-		@media only screen and (min-width: 480px) {
-			.markdown-body {
-				font-size: 14px;
-			}
-		}
-		
-		@media only screen and (min-width: 768px) {
-			.markdown-body {
-				font-size: 16px;
-			}
-		}
-		
-		@media print {
-			.markdown-body * {
-				background: transparent !important;
-				color: black !important;
-				filter: none !important;
-				-ms-filter: none !important;
-			}
-			.markdown-body {
-				font-size: 12pt;
-				max-width: 100%;
-				outline: none;
-				border: 0;
-			}
-			.markdown-body a,
-			.markdown-body a:visited {
-				text-decoration: underline;
-			}
-			.markdown-body .headeranchor-link {
-				display: none;
-			}
-			.markdown-body a[href]:after {
-				content: " (" attr(href) ")";
-			}
-			.markdown-body abbr[title]:after {
-				content: " (" attr(title) ")";
-			}
-			.markdown-body .ir a:after,
-			.markdown-body a[href^="javascript:"]:after,
-			.markdown-body a[href^="#"]:after {
-				content: "";
-			}
-			.markdown-body pre {
-				white-space: pre;
-				white-space: pre-wrap;
-				word-wrap: break-word;
-			}
-			.markdown-body pre,
-			.markdown-body blockquote {
-				border: 1px solid #999;
-				padding-right: 1em;
-				page-break-inside: avoid;
-			}
-			.markdown-body .progress,
-			.markdown-body .progress-bar {
-				-moz-box-shadow: none;
-				-webkit-box-shadow: none;
-				box-shadow: none;
-			}
-			.markdown-body .progress {
-				border: 1px solid #ddd;
-			}
-			.markdown-body .progress-bar {
-				height: 22px;
-				border-right: 1px solid #ddd;
-			}
-			.markdown-body tr,
-			.markdown-body img {
-				page-break-inside: avoid;
-			}
-			.markdown-body img {
-				max-width: 100% !important;
-			}
-			.markdown-body p,
-			.markdown-body h2,
-			.markdown-body h3 {
-				orphans: 3;
-				widows: 3;
-			}
-			.markdown-body h2,
-			.markdown-body h3 {
-				page-break-after: avoid;
-			}
-		}
-		</style>
-		<title>whitepaper</title>
-	</head>
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
 
-	<body>
-		<article class="markdown-body">
-			<h3 id="general-reference-urls"><a name="user-content-general-reference-urls" href="#general-reference-urls" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>General Reference URLs</h3>
-			<ol>
-				<li><a href="https://ssl.www8.hp.com/ww/en/secure/pdf/4aa6-7212enw.pdf">https://ssl.www8.hp.com/ww/en/secure/pdf/4aa6-7212enw.pdf</a></li>
-				<li><a href="https://s3.amazonaws.com/files.dezyre.com/images/blog/Top+6+Hadoop+Vendors+providing+Best+in+Class+Big+Data+Solutions_2.PNG">https://s3.amazonaws.com/files.dezyre.com/images/blog/Top+6+Hadoop+Vendors+providing+Best+in+Class+Big+Data+Solutions_2.PNG</a></li>
-				<li><a href="http://siliconangle.com/files/2016/03/Top-Vendors-1080x675.png">http://siliconangle.com/files/2016/03/Top-Vendors-1080x675.png</a></li>
-			</ol>
-			<h1 id="modern-data-science-for-business"><a name="user-content-modern-data-science-for-business" href="#modern-data-science-for-business" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MODERN DATA SCIENCE FOR BUSINESS</h1>
-			<p><em>A study of the current business intelligence and related landscapes, prepared by Slight Data Science LLC.</em></p>
-			<h2 id="contents"><a name="user-content-contents" href="#contents" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Contents</h2>
-			<ol>
-				<li>Executive Summary</li>
-				<li>Rationale of Data Science</li>
-				<li>Traditional Models and Shortfalls</li>
-				<li>Modern Models and Advantages</li>
-				<li>The Six Core Business Data Science Competencies</li>
-				<li>Current Business Landscape
-					<ol>
-						<li>Big Data &amp; Hadoop</li>
-						<li>Open vs. Proprietary</li>
-						<li>Python vs. R</li>
-						<li>Machine Learning</li>
-					</ol>
-				</li>
-				<li>Summary
-					<ol>
-						<li>Practical Application</li>
-						<li>Business Implications</li>
-					</ol>
-				</li>
-			</ol>
-			<h2 id="1-executive-summary"><a name="user-content-1-executive-summary" href="#1-executive-summary" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1 Executive summary</h2>
-			<blockquote>
-				<blockquote>
-					<p>&ldquo;Data is the Next Intel Inside.&rdquo; ~ Tim O’Reilly </p>
-				</blockquote>
-			</blockquote>
-			<p><em>omitted</em></p>
-			<p><strong>Overview diagram of datascience landscape. Include DW/BI tools mentioned in this document</strong></p>
-			<h2 id="2-rationale-of-data-science"><a name="user-content-2-rationale-of-data-science" href="#2-rationale-of-data-science" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2 Rationale of Data Science</h2>
-			<p><em>omitted</em></p>
-			<h2 id="3-traditional-bi-models-and-shortfalls"><a name="user-content-3-traditional-bi-models-and-shortfalls" href="#3-traditional-bi-models-and-shortfalls" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3 Traditional BI Models and Shortfalls</h2>
-			<p>The traditional model of data science application within business is marked by the business disciplines / functions known as Data-Warehousing (commonly DW or DWH) and Business Intelligence (BI). Where large amount of data are involed (billions of rows upwards) it may also be termed &lsquo;Big Data&rsquo;. The distinction beween DW and BI (together referred to as DW/BI) represents the bottom up and top down approach of solutions from a technical architecture perspective. DW being the bottom-up approach of the design from a data curation and storage perspective (and the related functions of extraction load and transformation [ETL]). Whilst BI is the top-down approach of data consumption starting at the business requirements and usually comprising at least data visualisation and often some form of interaction or querying of data. Where DW and BI converge, from a business persective at least - if not also from a theoretical viewpoint - is a blurred line, in terms of a specific separation of business process or technology application.</p>
-			<p>Although the distinction between DW and BI per se. in practice may be unclear the complete stack of technologies, processes and methodology are relatively well-defined, even if not always well understood or clearly implemented within business. It has not always been necessary from a strategic business perspective for a company to understand academically the data science principals behind the functional process - as long as operationally the components are well defined, properly integrated and a consistent analytical method is used. That said it is clearly advantageous for companies to have analysts, managers and IT professionals conversant in the foundations of data science theory spanning DW and BI.</p>
-			<p>The focus of DW and BI in the past has been technical design integration dealing with a mixture of transactional databases and unstructured data sources. <em>In regards to terminology the nature of the differences in data structures is referred to as &lsquo;heterogenous data&rsquo;, whereas data of the same strucutre &lsquo;homogenous data&rsquo;). A good example of heterogenous data would be the mixture of financial data and customer sentiment. In contrast homogenous data is all of the same type &amp; structure, an example would be multiple employee records cards. This mixture of data exists within organisations due to the variety of data sources, including variety in software package, vendor formats, database structures, differing data types and so on.</em> [a][breakout comment?] The mixture of data types is partly what makes data science so valuable to businesses, as it is possible to draw on multiple facts to draw new conclusions to steer business decision making. It is not therefore a desire of modern data science to avoid this mixture of data structures, but to handle it in a better fashion. What business impact this has we will come on to shortly. From the business intelligence perspective the additional challenges of data science traditionally revolve around perfomance constaints inherent in the DW layer - specifically the speed by which data can be processed, analysed and queried. Modern data science seeks to address these limitations.</p>
-			<h3 id="the-traditional-model"><a name="user-content-the-traditional-model" href="#the-traditional-model" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The Traditional Model</h3>
-			<p>First we describe the traditional data science model as applied to most businesss in order to highlight the weaknesses, afterwards we compare this against the modern model to underline the advantages to be gained from newer ways of working (and thinking).</p>
-			<p><a href="http://image.slidesharecdn.com/01bioverview-151214123258/95/traditional-datawarehousing-bi-overview-6-638.jpg">Image of Traditional DWBI model</a></p>
-			<p><em>Should the traditional model be described a little?</em></p>
-			<p>Although the model appears simple enough in terms of the arcitecture and overall component integration the shortalls are aparent and many:-</p>
-			<ol>
-				<li>Complexities within the ETL layer - including schema design, semantic layers etc. leading to complex and highly technical practical applications</li>
-				<li>Storage hardware performance limitations</li>
-				<li>Storage capacity limitations,</li>
-				<li>High cost</li>
-				<li>Poor analytics performance (limited compute)</li>
-				<li>Slow query performance (relational database limitations)</li>
-				<li>Restricted networking performance (separation of data and compute across a network)</li>
-				<li>Proprietary hardware/software</li>
-				<li>Lack of mobile and tablet visualisation</li>
-				<li>Technical design of dashboards</li>
-			</ol>
-			<p>The downfalls caused by some of these constraits are obvious, whilst others present more subtle challenges. Take the example of propriety software which creates vendor lock-in, this leads to inflated costs, restriction to choose the most suitable business solution and a reliance on highly technical &amp; specalised staff resources or the need for ongoing 3rd-party support. Therefore in the traditional model early implementation decisions have significant practical impact later on.</p>
-			<p>It is common for many businesses invested in such a traditional solution to experience conflations of the above issues, leading to DW/BI functions which can not keep up with the pace of change and evolution of the company. Modern data science practice addresses all of these challenges owing to a combination of technology advances and business maturity of data science understanding.</p>
-			<h2 id="modern-models-advantages"><a name="user-content-modern-models-advantages" href="#modern-models-advantages" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Modern Models &amp; Advantages</h2>
-			<p>Addressing the above challenges can be a daunting task for any business, due to the quickly changing landscape of options available to combat them. Underscoring those advancements has been a shift in technology, software and standard practices.</p>
-			<h3 id="advances-in-technology"><a name="user-content-advances-in-technology" href="#advances-in-technology" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Advances in Technology</h3>
-			<p>The technology changes within BI/DW can be summarised as:-
-				<br /> 1. A reduction in the cost of storage capacity (price per gigabyte) and speed (Solid-State Disks [SSD])
-				<br /> 2. Introduction of distributed file (HDFS) and compute (MapReduce) resoruces
-				<br /> 3. Availability of low cost, high capacity RAM (including Flash)
-				<br />
-				<em>convert to a table?</em></p>
-			<p>Simply put it is now possible for businesses to invest modestly in powerful and fast storage and compute power as standard, i.e. to use off the shelf commodity server hardware. Furthermore it is possible for companies to rent servers on-demand from cloud service providers therefore reducing further the total cost of ownership (TCO) and effectively outsourcing parts of the support and maintenance of IT allowing the business to focus on the more vaulable data science activities.</p>
-			<h3 id="software-paradigm-changes"><a name="user-content-software-paradigm-changes" href="#software-paradigm-changes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Software Paradigm Changes</h3>
-			<p>Complimenting the advances in technology is corresponding changes in software design of the end-to-end DW/BI solutions. The most obvious shift is the availability for software to take advantage of the increases in I/O performance leading to the possibility of real-time ingestion, analysis and consumption of terabytes of data (enabling Big Data analytics). This can be achieved without reliance on specialist hardware, instead the primiary software driver is to facilitate the distributed resource sharing of a commodity low-cost server cluster, known as massive parallel processing (MPP). This has been made possible primarily due to virtualisation of software and hardware (abstraction of compute and storage resources across a hardware array), distrubuted file systems (e.g. HDFS), distributed compute engines (e.g. MapReduce) and distrubted task scheduling (e.g. YARN).</p>
-			<h3 id="changes-in-business-practice"><a name="user-content-changes-in-business-practice" href="#changes-in-business-practice" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Changes in Business Practice</h3>
-			<p>Combined with the advances in technology and the software paradigm shift, businesses have needed to change the way they approach data analytics. This becomes aparent in the way the management of IT resources need to be deployed and managed, how data collection and consumption occurs, the ways in which anaytics can be performed, queries of the data be made and presentation of data on mobile user devices (laptops, internet connected desktops, smartphones and tablets). These changes are not simply cosmetic and are a long-awaited demand of businesses wanting to address the short-comings of traditional DW/BI solutions. The net impact to the business is more agile processing of data and quicker analytics - leading to real-time decision making. Under-the-hood, businesses staff skills requirements are evolving, especially across IT and functional data consumption teams.</p>
-			<p>The traditional roles of analysts are becoming known more commonly as data scientists (particularly within technology hubs such as Silicon Valley in the US). This shift is partly due to the greater emphasis on statistical and empirical methodologies - which also echos an alignment with the scientific and academic institutions.</p>
-			<p>Other changes in business practice are also aparent such as the increased adoption of Open software and hardware, which will be discussed in depth later.</p>
-			<h3 id="summary"><a name="user-content-summary" href="#summary" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Summary</h3>
-			<blockquote>
-				<blockquote>
-					<p>&ldquo;Data really powers everything that we do.&rdquo; ~ Jeff Weiner, LinkedIn </p>
-				</blockquote>
-			</blockquote>
-			<p>In summary the improvements over the traditional model are:-</p>
-			<table>
-				<thead>
-					<tr>
-						<th>Improvement</th>
-						<th>Traditional Area Addressed</th>
-						<th>Business Impact</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Hardware</td>
-						<td>Storage speed &amp; capacity cost</td>
-						<td>Keep all data (discard nothing)</td>
-					</tr>
-					<tr>
-						<td>Hardware</td>
-						<td>Volatile memory (RAM) speed, capacity &amp; cost</td>
-						<td>Analyse data faster</td>
-					</tr>
-					<tr>
-						<td>Software</td>
-						<td>Distributed resourcing</td>
-						<td>Use commodity hardware, flexible scaling, reduce cost</td>
-					</tr>
-					<tr>
-						<td>Software</td>
-						<td>Proprietary software and databases</td>
-						<td>Free from vendor lock-in, reduce cost, increase choice</td>
-					</tr>
-					<tr>
-						<td>Business</td>
-						<td>IT staff required for support &amp; maintenance</td>
-						<td>Deploy business analysts and functional experts</td>
-					</tr>
-					<tr>
-						<td>Business</td>
-						<td>Slow to process and make decisions on data</td>
-						<td>Make informed decisions quickly</td>
-					</tr>
-				</tbody>
-			</table>
-			<p><strong>TODO How to visualise versus traditional model</strong></p>
-			<h2 id="5-core-business-data-science-competencies"><a name="user-content-5-core-business-data-science-competencies" href="#5-core-business-data-science-competencies" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5 Core Business Data Science Competencies</h2>
-			<p>In order that a business achieve a suitable level of data science competency and protect its Return On Investment (ROI) it is not simply sufficient (or necessary) to deploy good hardware, software and business personnel. Rather, those three key components are a means to an end to achieve what the business really wants which is to extract value from data, and allow business decision makers to gain insight from it. Far too many businesses blindly adopt data science, datawharehousing and/or business intelligence only to find that what was employed is either not required, not well suited to the business challenge, or not well understood enough to make use of. In order that a business really gets a solution which is fit for purpose it should understand the six key components and achieve a minimum level of competency in each, in order to extract value from the whole. A good analogy of this would be a car with a tuned engine, efficient fuel system, high performance transmission, employing Micheal Schumaker as driver but not fitting any or suitable tyres. Leaving out any one of the components makes the whole system effectively useless. On the flip-side this presents strategic opportunities for businesses to make improvements to the output (i.e. achieving the competitive business advantage) since it not necessary to upgrade all of the components to increase capability. Extending on from our race-car analogy and as an example, we might choose only to swap out the engine for a newer model due to high mileage or change the tyres say from slick to wet to take advantage of changing race (i.e. business) conditions.</p>
-			<blockquote>
-				<blockquote>
-					<p>&ldquo;Information is the oil of the 21st century, and analytics is the combustion engine” ~ Peter Sondergaard, Senior Vice President, Gartner</p>
-				</blockquote>
-			</blockquote>
-			<p>For data science the components are not the engine, tyres, driver etc. but rather the following:-</p>
-			<h3 id="collection"><a name="user-content-collection" href="#collection" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Collection</h3>
-			<p>Traditionally data is collected in databases referred to as On-Line Transaction Processing (OLTP). The On-Line part indicating that the database contains active business data and the Transactional Processing referring to the fact that data is recorded as &lsquo;transactions&rsquo;. In a nutshell data is stored in rows and columns in a relational database (commomly SQL). Sometimes the application or service vendor does refer to any OLTP unit or database, or simply does not offer the feature due to specific application design decisions. When electronic formats are available but databases are not accessible, these OLTP stores might be spreadsheets or data files (e.g. CSV) which are written to in a way such as to achieve OLTP. In traditional DW/BI solutions it is difficult to incorporate data which falls outside of the traditional transactional database format, e.g. market research data, sensor data or customer sentiment. It also difficult for those types of data to be collected due to the volume of data requried to gain value from it. More often than not this means companies simply either avoid handling rich data or struggle to get off the ground with its analysis.</p>
-			<blockquote>
-				<blockquote>
-					<p>&ldquo;With data collection, ‘the sooner the better’ is always the best answer.&rdquo; ~ Marissa Mayer, CEO, Yahoo</p>
-				</blockquote>
-			</blockquote>
-			<p>Modern techniques allow for data to be collected in realtime and processed &lsquo;on-the-fly&rsquo;, further avoiding the need for a specific Extraction process in the traditional ETL model. Modern techniques also make it very easy to collect different types of data both internal and external to the business from a variety of sources.</p>
-			<h3 id="storage-injestion"><a name="user-content-storage-injestion" href="#storage-injestion" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Storage (&amp; Injestion)</h3>
-			<p>One limitation of the traditional model is methods of data storage. Usually storing data for &ldquo;Off-line&rdquo; processing requries a copy of the data within the datawarehouse, and possibly a third copy of the processed data in a datamart or datalake. Since older hardware has slower access rates and physical limitations on size, the cost of upgrading compatible hardware can be less cost effective than moving entirely to a modern distributed model.</p>
-			<p><em>any evidence to back that up?</em></p>
-			<p><a href="https://www.mapr.com/sites/default/files/architecture-image02.jpg">Traditional Storage &amp; Compute versus Modern</a></p>
-			<p>The modern DW/BI model stores data at the processing location, therefore significantly reducing network overhead and improving BI performance by orders of magnitude. <em>what&rsquo;s the study show?</em>.</p>
-			<p>Most commonly this is achieved nowadays via the HDFS component of the Hadoop suite. Which in its simplest terms is both a file storage and database mechanism which handles the computation of data at the point of storage. Another benefit is that modern distributed data stores are also capable of handling heterogenous data.</p>
-			<h3 id="transposition"><a name="user-content-transposition" href="#transposition" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Transposition</h3>
-			<p>In order to process data it must be transposed or formatted in a standard way, this could include storing financial data in a common base currency, or that times and dates use a consistent format. The drawbacks of traditional Transposition (or Transformation) layers is in their complexity. Often a company must define data schemas to a proposed standard and ensure that existing data complies and is transformed to adhere to the defined standard. Besides being technically complex, schemas require updating and require specific IT resource overhead.</p>
-			<p>By contrast the transposition layer is naturally thin in the modern model, owing to the fact that modern data-stores offer greater flexibility. Data is also kept closer to it&rsquo;s point of analysis and due to improved performance can be transposed where requried at the time of analysis rather than in advance like in the traditional model. Since modern transposition layers are very thin the demand on IT within the business is minimal, freeing up resources for the business and reducing costs.</p>
-			<h3 id="analysis"><a name="user-content-analysis" href="#analysis" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Analysis</h3>
-			<p>The biggest shifts in the analysis of data is within speed, volume and efficiency of processing, leading to quicker business insights. This is partly a result of both the technical advancements previously discussed. However it is also due to better understanding by businesses of the analytical techniques available. Furthermore, owing to the fact that less time and attention needs to be spent on hardware maintenance and ETL implementations more attention can be devoted to the analysis of data.</p>
-			<p><strong>what else needs to be said here?</strong></p>
-			<h3 id="presentation"><a name="user-content-presentation" href="#presentation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Presentation</h3>
-			<p><strong>TODO</strong></p>
-			<h3 id="interaction"><a name="user-content-interaction" href="#interaction" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Interaction</h3>
-			<p><strong>TODO</strong></p>
-			<h2 id="6-current-business-landscape"><a name="user-content-6-current-business-landscape" href="#6-current-business-landscape" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6 Current Business Landscape</h2>
-			<h3 id="big-data-hadoop"><a name="user-content-big-data-hadoop" href="#big-data-hadoop" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Big Data &amp; Hadoop</h3>
-			<blockquote>
-				<blockquote>
-					<p>“The world is one big data problem.” ~ Andrew McAfee</p>
-				</blockquote>
-			</blockquote>
-			<p>One attractive opportunity available to many companies is that of big data analytics. Big data is an opportunity for companies to get a competitive edge and to better understand customers. These opportunities are real and are a result of the ability for a business to consume vast amounts of data, which previously would have been an impossible task.</p>
-			<blockquote>
-				<blockquote>
-					<p>&ldquo;Big Data will spell the death of customer segmentation and force the marketer to understand each customer as an individual within 18 months or risk being left in the dust.” ~ Ginni Rometty, CEO, IBM</p>
-				</blockquote>
-			</blockquote>
-			<p>Whilst there is a certain degree of hype surrounding Big Data the excitement is owning to the fact that with very minimumal resources it is possible to get answers to previously unanswered questions. An average laptop computer is capable of processing tens of millions of data rows in seconds, a few servers on a distributed engine billions of rows. Considering there are only 8 billion people on the planet it is possible for a company of any size to ask a question of every single person on the planet and get an answer instantly.</p>
-			<blockquote>
-				<blockquote>
-					<p>“Without big data analytics, companies are blind and deaf, wandering out onto the web like deer on a freeway.” ~ Geoffrey Moore, author and consultant</p>
-				</blockquote>
-			</blockquote>
-			<p>Commonly Big Data is implemented using the Hadoop suite of tools, which has the backing of Yahoo!, Google and Apache Foundation. Whilst other big data tools are avilable the advantage of Hadoop is its open licensing model - effectively making it free software. Free as in cost, and free as in not tied down to a vendor. This effectively levels the playing field of the traditional database providers such as Oracle, SAP and IBM and is forcing those vendors to offer Hadoop not just as a value add-but as an alternative to proprietary systems.</p>
-			<p>Going with a Hadoop based system is usually the reference path, simply because of how the Hadoop suite has become the defacto indsutry standard. By choosing to adopt a Big Data or analytics platform which isn&rsquo;t at a minimum compatible with the main Hadoop components effictively means to become shut off from a vibrant growing ecosystem supported by vast numbers of talented developers, analysts and data scientists. Going back to our car analogy it would also be like running a road car on a combustible fuel that isn&rsquo;t available at the pump, whilst it is possible and may offer some attractive benefits for the vast majority of businesses this would make it&rsquo;s Big Data journey extremely challenging to say the least. Of course, following the trend isn&rsquo;t always the right thing to do.</p>
-			<p><em>Hadoop stack defined image</em></p>
-			<h3 id="open-vs-proprietary"><a name="user-content-open-vs-proprietary" href="#open-vs-proprietary" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Open vs. Proprietary</h3>
-			<p>Another of the choices faced by companies on their data science journey is whether to embrace open software and technology or adopt a proprietary stack. In the past whilst it has been tempting for companies to consider open-source software it has not always been entirely viable and few companies took the plunge. Datascience however offers a good opportunity to work with open technology across the complete stack including open-source software, open cloud technologies and software defined infrastructure. Common packages within the open data science stack include the Hadoop suite, R Stuido and Python as computational and analytical tools and visualisation and publishing tools commonly built around responsive layout display (D3.js). <em>Responsive:- content automatically fitting and self-tailored to the screen size on the device displaying it.</em></p>
-			<h3 id="python-r"><a name="user-content-python-r" href="#python-r" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python &amp; R</h3>
-			<p>Another large software components used with modern data science armory is that of an open and versatile analytical engine built on statistics and mathematics but also encorporating general programming abilities, and designed to work directly with data rather than more generic programming objects. Python &amp; R are popular choices (along with Scala and Java). The business the impact is that of a transition away from propritary statistical and analytical packages such as Excel, SPSS and IBM Rational. </p>
-			<p>The choice of computational language is more subtle than evaulating and chosing one or another since the ultimate decision will likely depend on the aims of the business, its strategic objectives and which language has the best community support for the business&rsquo;s operating industry. Often a mix of languages is used and ultimaately the data science team will have a strong say in which tools they choose to adopt. The decision by the business should not be glossed over however as there are wider business implications.</p>
-			<p>Another important aspect of Python or R code is the ability for interactive worksheets to be created allowing the business consumers of data, e.g. the marketing manager, finance director or CEO to reproduce technically advanced computations and modify relevant parameters without the need to modify analytical models. These workbooks may be published as intranet or web assets, distributed about the business and built upon to enable collaboration between cross-functional teams.</p>
-			<p><a href="http://www.kdnuggets.com/2015/05/r-vs-python-data-science.html">Python versus R adoption</a></p>
-			<p>*<em><a href="http://www.kdnuggets.com/wp-content/uploads/r-vs-python-numbers.jpg*"><a href="http://www.kdnuggets.com/wp-content/uploads/r-vs-python-numbers.jpg*">http://www.kdnuggets.com/wp-content/uploads/r-vs-python-numbers.jpg*</a></a></em></p>
-			<h3 id="machine-learning"><a name="user-content-machine-learning" href="#machine-learning" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Machine Learning</h3>
-			<p>Any review of data science would not be complete without at least a cursory overview of machine learning and the impact on business. Machine learning (ML) is a discipline which incorporates scientific experimentation, statistical methods, programming and data feedback loops. Its name comes from the resultant ability of code to effectively learn through optimising decision algorithms. Large vendors such as Microsoft and IBM mpw offer cloud machine learning platforms for companies wishing to dip their toe in the ML ocean. These tools offer data scientists and analysts access to distributed compute as standard, graphic representations of algorithms &amp; workflows and access to proprietary R and Phyton libraries, as well as allowing extensible plugins.</p>
-			<blockquote>
-				<blockquote>
-					<p>&ldquo;The big technology trend is to make systems intelligent and data is the raw material.&rdquo; ~ Amod Malviya, CTO at flipkart</p>
-				</blockquote>
-			</blockquote>
-			<p>The impact of machine learning on businesses is that complex data optimisations and simulations can be set up and run over time to form a constantly evolving analytical engine which naturally improves in perfomance. Examples of ML include the ability for a bank to detect with a defined level of confidence fraud transactions, or a medical provider the diagnosis of a specific disease within a patient, or a retailer to form an accurate predictive model of customer shopping behaviour.</p>
-			<h2 id="7-business-implications"><a name="user-content-7-business-implications" href="#7-business-implications" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>7 Business Implications</h2>
-			<p>The net business impact of everything we have discussed is sumarised in the table below. On one hand it is easy to capture and understand some of the benefits of modern data science translates e.g.cost savings, greater choice and better performance. However, on the other hand some of the benefits are less obvious, including the lower reliance on IT allowing for great focus on data consumption rather than administration. The table below represents the common benefits which can be realised by the majority of businesses, however this is not meant to be an exhaustive list. Other companies will find ways of leveraging modern data science and as the newer technologies are better understood by the industry as a whole, further benetifs are likely to emerge.</p>
-			<table>
-				<thead>
-					<tr>
-						<th>Modern Data Science paradigm</th>
-						<th>Business Impact</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Technology advances</td>
-						<td>Realtime analytics, lower TCO</td>
-					</tr>
-					<tr>
-						<td>Improved data science methodologies</td>
-						<td>Deeper analysis with greater bus. value</td>
-					</tr>
-					<tr>
-						<td>Open source</td>
-						<td>Greater choice, no vendor tie-in</td>
-					</tr>
-					<tr>
-						<td>Machine Learning</td>
-						<td>Self optimising data analytics</td>
-					</tr>
-					<tr>
-						<td>Big Data</td>
-						<td>360 insight, competitive advantage</td>
-					</tr>
-					<tr>
-						<td>Cloud technology</td>
-						<td>Lower TCO, lower IT overhead</td>
-					</tr>
-					<tr>
-						<td>R &amp; Python</td>
-						<td>Reusable code, community support</td>
-					</tr>
-				</tbody>
-			</table>
-			<h2 id="8-practical-applications"><a name="user-content-8-practical-applications" href="#8-practical-applications" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>8 Practical Applications</h2>
-			<table>
-				<thead>
-					<tr>
-						<th>Industry</th>
-						<th>Data Science use cases</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Automotive</td>
-						<td>Auto sensors reporting vehicle location problems</td>
-					</tr>
-					<tr>
-						<td>Financial services</td>
-						<td>Risk, fraud detection, portfolio analysis, new product development</td>
-					</tr>
-					<tr>
-						<td>Manufacturing</td>
-						<td>Quality assurance, warranty analyses</td>
-					</tr>
-					<tr>
-						<td>Healthcare</td>
-						<td>Patient sensors, monitoring, electronic health records, quality of care</td>
-					</tr>
-					<tr>
-						<td>Oil and gas</td>
-						<td>Drilling exploration sensor analyses</td>
-					</tr>
-					<tr>
-						<td>Retail</td>
-						<td>Consumer sentiment analyses, optimized marketing, personalized targeting, market basket analysis, intelligent forecasting, inventory management</td>
-					</tr>
-					<tr>
-						<td>Utilities</td>
-						<td>Smart meter analyses for network capacity, smart grid</td>
-					</tr>
-					<tr>
-						<td>Law enforcement</td>
-						<td>Threat analysis, social media monitoring, photo analysis, trac optimization</td>
-					</tr>
-					<tr>
-						<td>Advertising</td>
-						<td>Customer targeting, location-based advertising, personalized retargeting, churn detection/prevention</td>
-					</tr>
-				</tbody>
-			</table>
-			<p><strong>MORE</strong></p>
-			<h2 id="9-summary"><a name="user-content-9-summary" href="#9-summary" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>9 Summary</h2>
-			<blockquote>
-				<blockquote>
-					<p>&ldquo;Data matures like wine, applications like fish.&rdquo; ~ James Governor, Founder RedMonk</p>
-				</blockquote>
-			</blockquote>
-			<p><strong>TODO</strong></p>
-		</article>
-	</body>
-
+pre.editor-colors,
+.host {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: #676a6c;
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: #676a6c;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: #676a6c;
+}
+pre.editor-colors .gutter,
+.host .gutter {
+  background-color: #1d1f21;
+  color: #969896;
+}
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  padding: 0 0.25em 0 0.5em;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  background-color: #373b41;
+  color: #c5c8c6;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  color: #c5c8c6;
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #969896;
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #c5c8c6;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  color: #ffffff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #373b41;
+}
+pre.editor-colors .bracket-matcher .region,
+.host .bracket-matcher .region {
+  border-color: #969896;
+}
+.comment {
+  color: #969896;
+}
+.entity.name.type {
+  color: #f0c674;
+}
+.entity.other.inherited-class {
+  color: #b5bd68;
+}
+.keyword {
+  color: #b294bb;
+}
+.keyword.control {
+  color: #b294bb;
+}
+.keyword.operator {
+  color: #c5c8c6;
+}
+.keyword.other.special-method {
+  color: #81a2be;
+}
+.keyword.other.unit {
+  color: #de935f;
+}
+.storage {
+  color: #b294bb;
+}
+.constant {
+  color: #de935f;
+}
+.constant.character.escape {
+  color: #8abeb7;
+}
+.constant.numeric {
+  color: #de935f;
+}
+.constant.other.color {
+  color: #8abeb7;
+}
+.constant.other.symbol {
+  color: #b5bd68;
+}
+.variable {
+  color: #cc6666;
+}
+.variable.interpolation {
+  color: #a3685a;
+}
+.variable.parameter.function {
+  color: #c5c8c6;
+}
+.invalid.illegal {
+  background-color: #cc6666;
+  color: #1d1f21;
+}
+.string {
+  color: #b5bd68;
+}
+.string.regexp {
+  color: #8abeb7;
+}
+.string.regexp .source.ruby.embedded {
+  color: #f0c674;
+}
+.string.other.link {
+  color: #cc6666;
+}
+.punctuation.definition.parameters,
+.punctuation.definition.array {
+  color: #c5c8c6;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #81a2be;
+}
+.punctuation.definition.bold {
+  color: #f0c674;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #b294bb;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #a3685a;
+}
+.support.class {
+  color: #f0c674;
+}
+.support.function {
+  color: #8abeb7;
+}
+.support.function.any-method {
+  color: #81a2be;
+}
+.entity.name.function {
+  color: #81a2be;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #f0c674;
+}
+.entity.name.section {
+  color: #81a2be;
+}
+.entity.name.tag {
+  color: #cc6666;
+}
+.entity.other.attribute-name {
+  color: #de935f;
+}
+.entity.other.attribute-name.id {
+  color: #81a2be;
+}
+.meta.class {
+  color: #f0c674;
+}
+.meta.link {
+  color: #de935f;
+}
+.meta.require {
+  color: #81a2be;
+}
+.meta.selector {
+  color: #b294bb;
+}
+.meta.separator {
+  background-color: #373b41;
+  color: #c5c8c6;
+}
+.meta.tag {
+  color: #c5c8c6;
+}
+.none {
+  color: #c5c8c6;
+}
+.markup.bold {
+  color: #de935f;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #b294bb;
+}
+.markup.deleted {
+  color: #cc6666;
+}
+.markup.italic {
+  color: #b294bb;
+  font-style: italic;
+}
+.markup.heading {
+  color: #cc6666;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #81a2be;
+}
+.markup.link {
+  color: #81a2be;
+}
+.markup.inserted {
+  color: #b5bd68;
+}
+.markup.quote {
+  color: #de935f;
+}
+.markup.raw {
+  color: #b5bd68;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .link .entity {
+  color: #8abeb7;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json {
+  color: #cc6666;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+  color: #cc6666;
+}
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+  color: #b5bd68;
+}
+.source.json .meta.structure.dictionary.json > .constant.language.json,
+.source.json .meta.structure.array.json > .constant.language.json {
+  color: #8abeb7;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="modern-data-science-for-business">MODERN DATA SCIENCE FOR BUSINESS</h1>
+<p><em>A study of the current business intelligence and related landscapes, prepared by Slight Data Science LLC.</em></p>
+<h2 id="contents">Contents</h2>
+<ol>
+<li>Executive Summary</li>
+<li>Why Data Science?</li>
+<li>Traditional Models and Shortfalls</li>
+<li>Modern Models and Advantages</li>
+<li>The Six Core Business Data Science Competencies</li>
+<li>Current Business Landscape<ol>
+<li>Big Data &amp; Hadoop</li>
+<li>Open vs. Proprietary</li>
+<li>Python vs. R</li>
+<li>Machine Learning</li>
+</ol>
+</li>
+<li>Business Implications</li>
+<li>Practical Applications</li>
+</ol>
+<h2 id="1-executive-summary">1. Executive summary</h2>
+<blockquote>
+<p>&quot;Data is the Next Intel Inside.&quot; ~ Tim O’Reilly</p>
+</blockquote>
+<p>This whitepaper provides:-</p>
+<ol>
+<li>an overview of the current landscape for applied data science within business,</li>
+<li>an analysis of the tools &amp; modes of application; and</li>
+<li>an evaluation of the practical implications available to businesses wishing to conduct data science.</li>
+</ol>
+<p><strong>In fact</strong>, we argue that every business should conduct effective data science in order to remain competitive.</p>
+<p>This report provides the historic context of existing data science applications within business, often commonly referred to within organisations as data-warehousing (DW) (the procurement, sanitization and abstraction) and business intelligence (BI) (the analysis, general consumption and presentation of data). We develop the traditional DW/BI model and explain how advances in hardware and software technology provide cost-effective means of disrupting the foundational assumptions of existing data analytics platforms, both from a technical (IT) and business process orientated perspective. We further explore how these advances increase the consumption and computation of data within business, effectively introducing cost-viable ‘Big-Data’ capabilities. We conclude the study by looking at the total impact of this shift on business resourcing requirements.</p>
+<p>##Recommendations from our team##</p>
+<p><strong>Firstly,</strong> it is essential for every business wishing to remain competitive to conduct effective data science and analytics techniques. This applies equally to small businesses and large enterprises. It should include at a minimum, analysis of customer behaviour, operational efficiency and optimisation of profits.</p>
+<p><strong>Secondly,</strong> whether developing new business competencies or building on existing ones, the business should include key capabilities in six key defined areas. It is recommended that a minimum level of proficiency be achieved in each of those areas in order to effectively achieve a solution which holistically meets the basic needs of a modern business. That is to say that a total deficiency in any one of the six core areas of expertise renders any BI solution potentially not fit for purpose.</p>
+<p><strong>Thirdly,</strong> solutions should be approached from a vendor neutral perspective with additional preference given to ‘open’ platforms. Such an approach ensures the future-proofing of the data science function, allows agile upgrading and minimises the total cost of ownership. It is recommended that proprietary resources and techniques which cause vendor lock-in and provided restricted compatibility with other modules be avoided where practically possible.</p>
+<h2 id="2-why-data-science-">2. Why Data Science?</h2>
+<p>The importance of data has been known for a long time. Rulers have undertaken detailed censuses of populations for thousands of years. Around the turn of the 19th century tabulating companies, recording firms and early calculating agencies came to prominence and a merger of three big American firms lead to IBM and the birth of the computing era. Today, in the age of Internet, digital and social media, recorded information is rife. More data has been recorded in the past 4 years than in the whole of the history of humanity combined.</p>
+<p>Data science is the formal practice of finding meaning from facts. It is the art of answering and asking the right questions. Most businesses already have a large IT investment and systems dedicated to recording sales data, human resources information, marketing trends, operational statistics and competitive analyses. Making sense of this is the job of data science. Simply put it is the ability to draw conclusions to a specified degree of confidence in a repeatable manner.</p>
+<p>How this matters to business is particular to each organisation, including taking into account its mission, values and capabilities. Generally, it can be used to gain better understanding of customers, how markets will react, what actions competitors are likely to take and how a business can perform better.</p>
+<h2 id="3-traditional-bi-models-and-shortfalls">3. Traditional BI Models and Shortfalls</h2>
+<p>The traditional model of data science application within business is marked by the business disciplines known as Data-Warehousing (commonly DW or DWH) and Business Intelligence (BI). Where large amounts of data are involved (perhaps billions of rows upwards) it may also be termed &#39;Big Data&#39;. The distinction between DW and BI, together referred to as DW/BI, represents the bottom up and top down approach of solutions from a technical architecture perspective. DW being the bottom-up approach of the design from a data curation and storage perspective and the related functions of extraction load and transformation (ETL). Whilst BI is the top-down approach of data consumption starting at the business requirements and usually comprising at least data visualisation, analysis and often some form of interaction or querying of data. Where DW and BI converge, from a business perspective at least - if not also from a theoretical viewpoint - is a blurred line, in terms of a specific separation of business process or technology application.</p>
+<p>Although the distinction between DW and BI in practice may be unclear the complete stack of technologies, processes and methodology are relatively well-defined, even if not always well understood or clearly implemented within business. It has not always been necessary from a strategic business perspective for a company to understand academically the data science principals behind the functional process - as long as operationally the components are well defined, properly integrated and a consistent analytical method is used. That said it is clearly advantageous for companies to have analysts, managers and IT professionals conversant in the theory of data science.</p>
+<p>The focus of DW and BI in the past has been technical design integration dealing with a mixture of transactional databases and unstructured data sources. The mixture of data types is partly what makes data science so valuable to businesses, as it is possible to draw on multiple facts to draw new conclusions to steer business decision making. It is not therefore a desire of modern data science to avoid this mixture of data structures, but to handle it in a better fashion. What business impact this has we will come on to shortly. From the business intelligence perspective, the additional challenges of data science traditionally revolve around performance constraints inherent in the DW layer - specifically the speed by which data can be processed, analysed and queried. Modern data science seeks to address these limitations.</p>
+<h3 id="the-traditional-model">The Traditional Model</h3>
+<p>First we describe the traditional data science model as applied to most businesss in order to highlight the weaknesses, afterwards we compare this against the modern model to underline the advantages to be gained from newer ways of working (and thinking).</p>
+<p><img src="/Users/mattslight/Dev/slightme/public_html/whitepaper/img/traditional-model.png" alt="A Traditional Data Science model" title="A Traditional Data Science model"></p>
+<p>The traditional model essentially comprises a thick DW backend. This is usually large traditional dedicated database, not distributed and often row based data store. The data warehouse store is the first stage intermediary store, essentially a waiting space sitting before data-marts and/or cubes which are designed to be queried against. Each data-mart or cube must be carefully crafted for the function to which it is designed and generally is not all-purpose for open analysis. The number of dimensions and the computational power of these data-marts and cubes is relatively lower than the modern distributed counterparts, unless employing specialist hardware. Sitting between the source data and the DW backend is a thick ETL layer, which is responsible for fetching data from sources, transposing to a standard format and loading into a data warehouse. And the right hand side of the model is the BI layer which performs on-line analysis (OLAP), reporting, dashboard creation, and other final preparations before the data is consumed. At the far right of the model are client applications for displaying analysis and performing a small degree of data manipulation.</p>
+<p>Although the model appears simple enough in terms of the architecture and overall component integration the shortfalls are apparent and many:-</p>
+<ol>
+<li>Complexities within the ETL layer - including schema design, semantic layers etc. leading to complex and highly technical practical applications</li>
+<li>Storage hardware performance limitations</li>
+<li>Storage capacity limitations</li>
+<li>High cost</li>
+<li>Poor analytics performance (limited compute)</li>
+<li>Slow query performance (monolithic database limitations)</li>
+<li>Restricted networking performance (separation of data and compute across a network)</li>
+<li>Proprietary hardware/software</li>
+<li>Lack of responsive visualisation</li>
+<li>Specialist technical design of dashboards</li>
+</ol>
+<p>The downfalls caused by some of these constraints are obvious, whilst others present more subtle challenges. Take the example of propriety software which creates vendor lock-in, this leads to inflated costs, restriction to choose the most suitable business solution and a reliance on highly technical &amp; specialised staff resources or the need for ongoing 3rd-party support. Therefore, in the traditional model early implementation decisions have significant practical impact later on.</p>
+<p>It is common for many businesses invested in such a traditional solution to experience conflations of the above issues, leading to DW/BI functions which can not keep up with the pace of change and evolution of the company. Modern data science practice addresses all of these challenges owing to a combination of technology advances and business maturity of data science understanding.</p>
+<h2 id="4-modern-models-amp-advantages">4. Modern Models &amp; Advantages</h2>
+<p>Addressing the above challenges can be a daunting task for any business, due to the quickly changing landscape of options available to combat them. Underscoring those advancements has been a shift in technology, software and standard practices.</p>
+<p><img src="/Users/mattslight/Dev/slightme/public_html/whitepaper/img/modern-model.png" alt="A Traditional Data Science model" title="A Traditional Data Science model"></p>
+<h3 id="advances-in-technology">Advances in Technology</h3>
+<p>The modern technology changes within BI/DW can be summarised as:-</p>
+<ol>
+<li>A reduction in the cost of storage capacity (price per terabyte) and speed (solid-state disks)</li>
+<li>Introduction of distributed file (HDFS) and compute (MapReduce) resources</li>
+<li>Availability of low cost, high capacity RAM (including Flash)</li>
+</ol>
+<p>Simply put it is now possible for businesses to invest modestly in powerful and fast storage and compute power as standard, i.e. to use off the shelf commodity server hardware. Furthermore, it is possible for companies to rent servers on-demand from cloud service providers therefore reducing further the total cost of ownership (TCO) and effectively outsourcing parts of the support and maintenance of IT allowing the business to focus on the more valuable data science activities.</p>
+<h3 id="software-paradigm-changes">Software Paradigm Changes</h3>
+<p>Complementing the advances in technology is corresponding changes in software design of the end-to-end DW/BI solutions. The most obvious shift is the availability for software to take advantage of the increases in I/O performance leading to the possibility of real-time ingestion, analysis and consumption of terabytes of data. This can be achieved without reliance on specialist hardware, instead the primary software driver is to facilitate the distributed resource sharing of a commodity low-cost server cluster, known as massive parallel processing (MPP). This has been made possible primarily due to virtualisation of software and hardware (abstraction of compute and storage resources across a hardware array), distributed file systems (e.g. HDFS), distributed compute engines (e.g. MapReduce) and distributed task scheduling (e.g. YARN).</p>
+<h3 id="changes-in-business-practice">Changes in Business Practice</h3>
+<p>Combined with the advances in technology and the software paradigm shift, businesses have needed to change the way they approach data analytics. This becomes apparent in the way the management of IT resources need to be deployed and managed, how data collection and consumption occurs, the ways in which analytics can be performed, queries of the data be made and presentation of data on mobile user devices (laptops, internet connected desktops, smartphones and tablets). These changes are not simply cosmetic and are a long-awaited by businesses wanting to address the short-comings of traditional DW/BI solutions. The net impact to the business is more agile processing of data and quicker analytics - leading to real-time decision making. Under-the-hood, businesses staff skills’ requirements are evolving, especially across IT and functional data consumption teams.</p>
+<p>The traditional roles of analysts are becoming known more commonly as data scientists (particularly within technology hubs such as Silicon Valley in the US). This shift is partly due to the greater emphasis on statistical and empirical methodologies - which also echoes an alignment with the scientific and academic institutions.</p>
+<p>Other changes in business practice are also apparent such as the increased adoption of Open software and hardware, which will be discussed in depth later.</p>
+<h3 id="summary">Summary</h3>
+<blockquote>
+<p>&quot;Data really powers everything that we do.&quot; ~ Jeff Weiner, LinkedIn</p>
+</blockquote>
+<p>In summary the improvements over the traditional model are:-</p>
+<table>
+<thead>
+<tr>
+<th>Improvement</th>
+<th>Traditional Area Addressed</th>
+<th>Business Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hardware</td>
+<td>Storage speed &amp; capacity cost</td>
+<td>Keep all data (discard nothing)</td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td>Volatile memory (RAM) speed, capacity &amp; cost</td>
+<td>Analyse data faster</td>
+</tr>
+<tr>
+<td>Software</td>
+<td>Distributed resourcing</td>
+<td>Use commodity hardware, flexible scaling, reduce cost</td>
+</tr>
+<tr>
+<td>Software</td>
+<td>Proprietary software and databases</td>
+<td>No vendor lock-in, reduce cost, increase choice</td>
+</tr>
+<tr>
+<td>Business</td>
+<td>IT staff required for support &amp; maintenance</td>
+<td>Deploy business analysts and functional experts</td>
+</tr>
+<tr>
+<td>Business</td>
+<td>Slow to process and make decisions on data</td>
+<td>Make informed decisions quickly</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-core-business-data-science-competencies">5. Core Business Data Science Competencies</h2>
+<blockquote>
+<p>“<strong>Information</strong> is the <strong><em>oil</em></strong> of the 21st century, and <strong>analytics</strong> is the <strong><em>combustion engine</em></strong>” ~ Peter Sondergaard, SVP, Gartner</p>
+</blockquote>
+<p>In order that a business achieve a suitable level of data science competency and protect its return on investment (ROI) it is neither sufficient nor necessary to deploy good hardware, software and business personnel. Rather, those three components are tools to achieve the business strategy which is to extract value from data, and allow business decision makers to gain insight from it. Far too many businesses blindly adopt data science, data-warehousing infrastructure and/or business intelligence software only to find that what was employed is either not required, not well suited to the business challenge, or not well understood enough to make use of. In order that a business really gets a solution which is fit for purpose it should understand the six key components and achieve a minimum level of competency in each, in order to extract value from the whole. A good analogy of this would be a car with a tuned engine, efficient fuel system, high performance transmission, employing Michael Schumacher as driver but not fitting any or suitable tyres. Leaving out any one of the components makes the whole system effectively useless. On the flip-side this presents strategic opportunities for businesses to make improvements to the output (i.e. achieving the competitive business advantage) since it not necessary to upgrade all of the components to increase capability. Extending on from our race-car analogy and as an example, we might choose only to swap out the engine for a newer model due to high mileage or change the tyres say from slick to wet to take advantage of changing race (i.e. business) conditions.</p>
+<p>For data science the key components are not the engine, tyres, driver etc. but rather the following:-</p>
+<h3 id="collection">Collection</h3>
+<blockquote>
+<p>With data collection, ‘<strong>the sooner the better</strong>’ is always the <strong><em>best answer</em></strong>&quot; ~ Marissa Mayer, CEO, Yahoo</p>
+</blockquote>
+<p>Traditionally data is collected in databases referred to as on-line transaction processing (OLTP). On-line indicating that the database contains active business data and transactional processing refers to the fact that data is recorded as &#39;transactions&#39;. In a nutshell data is stored in rows and columns and usually in a relational database (commonly SQL). Sometimes a line of business application does not include an OLTP database, instead data might be accessed using an API or flat files (e.g. spreadsheet, Excel, CSV). In traditional DW/BI solutions it is difficult to incorporate data which falls outside of the traditional transactional format, this might apply to market research data, sensor data or customer sentiment. It can also be difficult some types of data to be collected due to the volume required to extract value from it (e.g. sensor data or clickstreams. This can mean a company simply avoids handling such data or struggles to get off the ground with its analysis.</p>
+<p>Modern techniques allow for data to be collected in real-time and processed &#39;on-the-fly&#39;, further avoiding the need for a specific extraction process as per the traditional ETL layer. Modern techniques also make it very easy to collect different types of data both internal and external to the business from a variety of sources through open tools such as Apache Flume.</p>
+<blockquote>
+<p><strong>Minimum Required Competency</strong> – Ability to collect data from multiple sources, including key business application databases, CRM data, flat files with key company transactional data (finance reports, marketing analysis etc.).</p>
+<p><strong>Recommended Competency</strong> – Ability to capture streaming data e.g. customer sentiment, clickstreams, sensor / log data, product usage statistics, customer feedback, real-time financial, sales and marketing data.</p>
+</blockquote>
+<h3 id="storage-injestion-">Storage (&amp; Injestion)</h3>
+<p>One limitation of the traditional model is methods of data storage. Usually storing data for &quot;off-line&quot; processing requires a copy of the data within the data-warehouse, and possibly a third copy of the processed data in a data-mart or data-lake. Since older hardware has slower access rates and physical limitations on size, the cost of upgrading compatible hardware can be less cost effective than moving entirely to a modern distributed model.</p>
+<p><img src="/Users/mattslight/Dev/slightme/public_html/whitepaper/img/traditional-vs-modern.png" alt="Traditional storage and compute compared to Modern model" title="Traditional storage and compute compared to Modern model"></p>
+<p>The modern DW/BI model stores data at the processing location, therefore significantly reducing network overhead and improving BI performance by orders of magnitude.</p>
+<p>Most commonly this is achieved through a distributed file system (e.g. HDFS component of the Hadoop suite). In its simplest terms a good distributed file system to facilitate data science is a combination of file storage, database mechanism and computation of data at the point of storage. In addition, modern distributed data stores are also capable of handling heterogeneous data.</p>
+<blockquote>
+<p><strong>Minimum Required Competency</strong> – Storage of heterogeneous data in centralised database.</p>
+<p><strong>Recommended Competency</strong> – Distributed storage on a modern HDFS style architecture. Data segmentation, fault tolerance and redundancy. Columnar and NoSQL in addition to traditional row based stores.</p>
+</blockquote>
+<h3 id="transposition">Transposition</h3>
+<p>In order to process data, it must be transposed or formatted in a standard way, this could include storing financial data in a common base currency, or that times and dates use a consistent format. The drawbacks of traditional transposition (or transformation) layers is in their complexity. Often a company must define data schemas to a proposed standard and ensure that existing data complies with and is transformed to adhere to the defined standard. Besides being technically complex, schemas require updating and require specific IT resource overhead.</p>
+<p>By contrast the transposition layer is naturally thin in the modern model, owing to the fact that modern data-stores offer greater flexibility. Data is also kept closer to its point of analysis and due to improved performance can be transposed where required at the time of analysis rather than in advance like in the traditional model. Since modern transposition layers are very thin the demand on IT within the business is minimal, freeing up resources for the business and reducing costs.</p>
+<blockquote>
+<p><strong>Minimum Required Competency</strong> – Ability to automate transposition of data based on a defined schema.</p>
+<p><strong>Recommended Competency</strong> – Transposition of data on the fly, if necessary at point of consumption. Batch processing of data not recommended.</p>
+</blockquote>
+<h3 id="analysis">Analysis</h3>
+<p>The biggest shifts in the analysis of data is speed, volume and efficiency of processing, leading to quicker business insights. This is partly a result of both the technical advancements previously discussed. However, it is also due to better understanding by businesses of the analytical techniques available. Furthermore, owing to the fact that less time and attention needs to be spent on hardware maintenance and ETL implementations more attention can be devoted to the analysis of data.
+Analysis tools are becoming widely available with many being offered at free or modest per seat or freemium subscriptions. Common general purpose tools include Microsoft’s Power BI or Google’s Data Studio. Modern analysis tools tend to be built around cloud offerings and designed to work with lower cost hardware, reduce financial and require less expertise to deploy &amp; use.</p>
+<p>The other battle ground in the analytics space is that of the open analytical and statistical programming languages, such as R Studio, Python or Scala. See section 6 for a comparison of R Studio and Python.</p>
+<blockquote>
+<p><strong>Minimum Competency</strong> –  Ability to query or aggregate hundreds of millions of rows of data in seconds.</p>
+<p><strong>Recommended Competency</strong> – Ability to query or aggregate billions of rows of data in seconds. Machine learning for analyses which require optimisation or adaption. Standardisation of analysis language into one of the standard data science languages. R, Python and Scala highly recommended.</p>
+</blockquote>
+<h3 id="presentation">Presentation</h3>
+<p>Traditionally the presentation layer has been the thin end of the wedge of the overall DW/BI suite. Historically, presentations needed to be prepared in advance and were designed to be consumed on the desktop or by printed report. The growth of smartphone, tablet and large screen monitor walls has stretched the display spectrum in terms of the physical screen size.</p>
+<p>Modern tools address presentation on these newer devices very well, particularly at the mobile end of the spectrum. Other modern trends include touchscreen capabilities, the ability to interact / filter and segment data on the fly and a shift to digital (away from printed medium).</p>
+<p>Gartner’s annual magic quadrant for business intelligence is a good reference for these new offerings, notable entrants are Tableau and Qlik, both offering deployed and SaaS setups.</p>
+<blockquote>
+<p><strong>Minimum Competency</strong> – Presentation of data to online publishable charts consumed on desktop and mobile.</p>
+<p><strong>Recommended Competency</strong> – Authorship controls, ability to delegate permissions, including review, publish, editing and consumption. Digital rights restrictions on distribution outside of the company. Large screen presentation (multi monitor / projector).</p>
+</blockquote>
+<h3 id="interaction">Interaction</h3>
+<p>Large scale real-time data analysis is generally not possible in the traditional model; interaction of data is therefore limited to pre-processed scenarios. On the other hand, the modern setup allows for filtering on the fly and running new scenarios in real-time. Other modern advancements include the ability to interact using non-traditional input devices such as gestures / voice command and natural language querying ability, rather than through a technical SQL. This allows non-technical business consumers to run rich queries without prior programming knowledge, reducing the analytical cost and speeding up analysis time.</p>
+<blockquote>
+<p><strong>Minimum Competency</strong> – Real time filtering and query of data segments.</p>
+<p><strong>Recommended Competency</strong> – Human language queries, graphical touch screen controls.</p>
+</blockquote>
+<h2 id="6-current-business-landscape">6. Current Business Landscape</h2>
+<h3 id="big-data-hadoop">Big Data &amp; Hadoop</h3>
+<blockquote>
+<p>“The <strong>world</strong> is one <strong><em>big data</em></strong> problem.” ~ Andrew McAfee</p>
+</blockquote>
+<p>One attractive new opportunity available to many companies is that of big data analytics. Big data is an opportunity for companies to get a competitive edge and to better understand customers.</p>
+<blockquote>
+<p>&quot;Big Data will spell the <strong><em>death of customer segmentation</em></strong> and force the marketer to <strong>understand each customer</strong> as an individual within 18 months <strong><em>or risk being left in the dust.</em></strong>” ~ Ginni Rometty, CEO, IBM</p>
+</blockquote>
+<p>With very minimal resources it is possible to get answers to previously unanswered questions through big data. With modern advancements an average entry level laptop computer is now capable of processing tens of millions of data rows in seconds, whilst a few servers on a distributed engine can quite easily manage billions of rows in sub second timings. Considering there are only 8 billion people on the planet it is possible for a company of any size to ask a question of every single person on the planet and get an answer instantly and using on-demand cloud resources, pay pennies.</p>
+<blockquote>
+<p>“<strong>Without big data analytics</strong>, companies are <strong><em>blind</em></strong> &amp; <strong><em>deaf</em></strong>, wandering out onto the web like deer on a freeway.” ~ Geoffrey Moore, author and consultant</p>
+</blockquote>
+<p>Commonly Big Data is implemented</p>
+<p>Commonly Big Data is implemented using the Hadoop suite of tools, which has the backing of Yahoo!, Google and Apache Foundation. Whilst other big data tools are available the advantage of Hadoop is its open licensing model - effectively making it free software. Free as in cost, and free as in not tied down to a vendor. This levels the playing field and is forcing traditional database providers such as Oracle, SAP and IBM to offer Hadoop not just as a value add-but as an alternative to proprietary systems.</p>
+<p>For businesses wishing to upgrade their data science stack, the recommendation is to use the Hadoop suite as a reference starting point, simply because of how the Hadoop ecosystem has become the de facto industry standard. By choosing to adopt a Big Data or analytics platform which isn&#39;t at a minimum compatible with the main Hadoop components effectively means to become shut off from a vibrant growing community supported by vast numbers of talented developers, analysts and data scientists.</p>
+<p><img src="/Users/mattslight/Dev/slightme/public_html/whitepaper/img/hadoop-stack-defined.png" alt="Common components in modern Big Data Stack" title="Common components in modern Big Data Stack"></p>
+<h3 id="open-vs-proprietary">Open vs. Proprietary</h3>
+<p>In the past whilst it has been tempting for companies to consider open-source software it has not always been entirely viable and few companies took the plunge. Data science is a good place for businesses to work with open technology including open-source software, open cloud technologies and software defined infrastructure. Common packages within the open data science stack include the Hadoop suite, R Studio and Python as computational and analytical tools and visualisation and publishing tools commonly built around responsive layout display engines (such as D3.js).</p>
+<h3 id="python-r">Python &amp; R</h3>
+<p>Open and versatile analytical / statistical and general purpose programming language are attractive to businesses, as they are designed to work directly with data analysis. Python &amp; R are popular choices (along with Scala). In business as well as academia this is causing a shift away from traditional proprietary statistical packages such as SAS and SPSS.</p>
+<p>The choice of computational language is subtler than evaluating and choosing one or another since the ultimate decision will likely depend on the aims of the business, its strategic objectives and which language has the best community support for the business&#39;s operating industry. Often a mix of languages is used and ultimately the data science team will have a strong say in which tools they choose to adopt. The decision by the business should not be glossed over however as there are wider business implications.</p>
+<p>Another important aspect of Python or R code is the ability for interactive worksheets to be created allowing the business consumers of data, e.g. the marketing manager, finance director or CEO to reproduce technically advanced computations and modify relevant parameters without the need to modify analytical models. These workbooks may be published as intranet or web assets, distributed about the business and opened up to cross-functional collaboration.</p>
+<h3 id="machine-learning">Machine Learning</h3>
+<p>Machine learning (ML) incorporates scientific experimentation, statistical methods, programming and data feedback loops. Effectively allowing learning through optimising decision algorithms. Large vendors such as Microsoft and IBM offer cloud machine learning platforms at very affordable rates. These tools offer data scientists and analysts access to distributed compute as standard, graphic representations of algorithms &amp; workflows and access to proprietary R and Python libraries, as well as allowing extensible plugins.</p>
+<blockquote>
+<p>&quot;The big technology trend is to make systems <strong><em>intelligent</em></strong> and data is the <strong>raw material</strong>&quot; ~ Amod Malviya, CTO at flipkart</p>
+</blockquote>
+<p>The impact of machine learning on businesses is that complex data optimisations and simulations can be set up and run over time to form a constantly evolving analytical engine which naturally improves in performance. Examples of ML include the ability for a bank to detect with a defined level of confidence fraud transactions, or a medical provider the diagnosis of a specific disease within a patient, or a retailer to form an accurate predictive model of customer shopping behaviour.</p>
+<h2 id="7-business-implications">7 Business Implications</h2>
+<p>Some benefits of modern data science are easy to quantify: cost savings, greater choice and better performance. On the other hand, other benefits are more subtle, such as the lower reliance on IT allowing for great focus on data consumption rather than administration. The table below represents the common benefits which can be realised by the majority of businesses, however this is not meant to be an exhaustive list. Other companies will find ways of leveraging modern data science and as the newer technologies are better understood by the industry as a whole, further benefits are likely to emerge.</p>
+<table>
+<thead>
+<tr>
+<th>Modern Data Science paradigm</th>
+<th>Business Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technology advances</td>
+<td>Realtime analytics, lower TCO</td>
+</tr>
+<tr>
+<td>Improved data science methodologies</td>
+<td>Deeper analysis with greater bus. value</td>
+</tr>
+<tr>
+<td>Open source</td>
+<td>Greater choice, no vendor tie-in</td>
+</tr>
+<tr>
+<td>Machine Learning</td>
+<td>Self optimising data analytics</td>
+</tr>
+<tr>
+<td>Big Data</td>
+<td>360&deg; insight, competitive advantage</td>
+</tr>
+<tr>
+<td>Cloud technology</td>
+<td>Lower TCO, lower IT overhead</td>
+</tr>
+<tr>
+<td>R &amp; Python</td>
+<td>Reusable code, community support</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-practical-applications">8 Practical Applications</h2>
+<blockquote>
+<p>&quot;Data matures like <strong>wine</strong>, applications like <strong><em>fish</em></strong>.&quot;
+~ James Governor, Founder RedMonk</p>
+</blockquote>
+<p>The variety of applications and the freedom to tailor a solution to fit the goals and ethos of the business is one of the appealing features of data science. Questions that are particularly suited to one company may not be appropriate for another business even when operating in the same industry. Each business is unique and there is no one-size fits all approach to the application of data science, even where the technology and process driven aspects can be defined and transposed. That said it is possible to provide some general examples of practical applications:-</p>
+<table>
+<thead>
+<tr>
+<th>Industry</th>
+<th>Data Science use cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automotive</td>
+<td>Vehicle sensors reporting vehicle location problems</td>
+</tr>
+<tr>
+<td>Financial services</td>
+<td>Risk, fraud detection, portfolio analysis, new product development</td>
+</tr>
+<tr>
+<td>Manufacturing</td>
+<td>Quality assurance, warranty analyses</td>
+</tr>
+<tr>
+<td>Healthcare</td>
+<td>Patient sensors, monitoring, electronic health records, quality of care</td>
+</tr>
+<tr>
+<td>Oil and gas</td>
+<td>Drilling exploration sensor analyses</td>
+</tr>
+<tr>
+<td>Retail</td>
+<td>Consumer sentiment analyses, optimized marketing, personalised targeting, market basket analysis, intelligent forecasting, inventory management</td>
+</tr>
+<tr>
+<td>Utilities</td>
+<td>Smart meter analyses for network capacity, smart grid</td>
+</tr>
+<tr>
+<td>Law enforcement</td>
+<td>Threat analysis, social media monitoring, photo analysis, trac optimization</td>
+</tr>
+<tr>
+<td>Advertising</td>
+<td>Customer targeting, location-based advertising, personalised retargeting, churn detection/prevention</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>UPDATE NOTE</strong> - For an up-to-date landscape poster of the vendors in the modern data science space – please visit <a href="http://slight.me/data-science-vendor-landscape">http://slight.me/data-science-vendor-landscape</a> </p>
+</blockquote></body>
 </html>

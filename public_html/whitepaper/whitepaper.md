@@ -1,21 +1,23 @@
+*Other versions of this document*, [PDF](http://slight.me/whitepaper/whitepaper.pdf), [HTML](http://slight.me/whitepaper/whitepaper.html), [Word](http://slight.me/whitepaper/whitepaper.docx), [Markdown](http://slight.me/whitepaper/whitepaper.md)
+
 MODERN DATA SCIENCE FOR BUSINESS
 ================================
-*A study of the current business intelligence and related landscapes, prepared by Slight Data Science LLC.*
+*A study of the current business intelligence and related landscapes, prepared by [Slight Data Science](http://slight.me/) LLC.*
 
 Contents
 --------
-1. Executive Summary
-2. Why Data Science?
-3. Traditional Models and Shortfalls
-4. Modern Models and Advantages
-5. The Six Core Business Data Science Competencies
-6. Current Business Landscape
-    1. Big Data & Hadoop
-    2. Open vs. Proprietary
-    3. Python vs. R
-    4. Machine Learning
-7. Business Implications
-8. Practical Applications
+1. [Executive Summary](#executive-summary)
+2. [Why Data Science?](#2-why-data-science-)
+3. [Traditional Models and Shortfalls](#3-traditional-bi-models-and-shortfalls)
+4. [Modern Models and Advantages](#4-modern-models-amp-advantages)
+5. [The Six Core Business Data Science Competencies](#5-core-business-data-science-competencies)
+6. [Current Business Landscape](#6-current-business-landscape)
+    + [Big Data & Hadoop](#big-data-hadoop)
+    + [Open vs. Proprietary](#open-vs-proprietary)
+    + [Python & R](#python-r)
+    + [Machine Learning](#machine-learning)
+7. [Business Implications](#7-business-implications)
+8. [Practical Applications](#8-practical-applications)
 
 
 ## 1. Executive summary
@@ -24,15 +26,15 @@ Contents
 
 This whitepaper provides:-
 
-  1.	an overview of the current landscape for applied data science within business,
-  2.	an analysis of the tools & modes of application; and
+  1.  an overview of the current landscape for applied data science within business,
+  2.  an analysis of the tools & modes of application; and
   3.  an evaluation of the practical implications available to businesses wishing to conduct data science.
 
 **In fact**, we argue that every business should conduct effective data science in order to remain competitive.
 
 This report provides the historic context of existing data science applications within business, often commonly referred to within organisations as data-warehousing (DW) (the procurement, sanitization and abstraction) and business intelligence (BI) (the analysis, general consumption and presentation of data). We develop the traditional DW/BI model and explain how advances in hardware and software technology provide cost-effective means of disrupting the foundational assumptions of existing data analytics platforms, both from a technical (IT) and business process orientated perspective. We further explore how these advances increase the consumption and computation of data within business, effectively introducing cost-viable ‘Big-Data’ capabilities. We conclude the study by looking at the total impact of this shift on business resourcing requirements.
 
-##Recommendations from our team##
+## Recommendations from our team
 
 **Firstly,** it is essential for every business wishing to remain competitive to conduct effective data science and analytics techniques. This applies equally to small businesses and large enterprises. It should include at a minimum, analysis of customer behaviour, operational efficiency and optimisation of profits.
 
@@ -61,7 +63,7 @@ The focus of DW and BI in the past has been technical design integration dealing
 
 
 ### The Traditional Model
-First we describe the traditional data science model as applied to most businesss in order to highlight the weaknesses, afterwards we compare this against the modern model to underline the advantages to be gained from newer ways of working (and thinking).
+First we describe the traditional data science model as applied to most businesses in order to highlight the weaknesses, afterwards we compare this against the modern model to underline the advantages to be gained from newer ways of working (and thinking).
 
 ![A Traditional Data Science model](./img/traditional-model.png "A Traditional Data Science model")
 
@@ -283,4 +285,4 @@ The variety of applications and the freedom to tailor a solution to fit the goal
 |Law enforcement|Threat analysis, social media monitoring, photo analysis, trac optimization|
 |Advertising|Customer targeting, location-based advertising, personalised retargeting, churn detection/prevention|
 
-> **UPDATE NOTE** - For an up-to-date landscape poster of the vendors in the modern data science space – please visit http://slight.me/data-science-vendor-landscape 
+> **UPDATE NOTE** - For an up-to-date landscape poster of the vendors in the modern data science space – please visit http://slight.me/data-science-vendor-landscape
