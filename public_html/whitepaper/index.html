@@ -100,6 +100,7 @@
 .markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
 .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
 .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.markdown-preview body { max-width: 800px; margin-right: auto; margin-left: auto; }
 .bracket-matcher .region {
   border-bottom: 1px dotted lime;
   position: absolute;
@@ -364,24 +365,25 @@ pre.editor-colors .bracket-matcher .region,
 }
 </style>
   </head>
-  <body class='markdown-preview' data-use-github-style><h1 id="modern-data-science-for-business">MODERN DATA SCIENCE FOR BUSINESS</h1>
-<p><em>A study of the current business intelligence and related landscapes, prepared by Slight Data Science LLC.</em></p>
+  <body class='markdown-preview' data-use-github-style><p><em>Other versions of this document</em>, <a href="http://slight.me/whitepaper/whitepaper.pdf">PDF</a>, <a href="http://slight.me/whitepaper/whitepaper.html">HTML</a>, <a href="http://slight.me/whitepaper/whitepaper.docx">Word</a>, <a href="http://slight.me/whitepaper/whitepaper.md">Markdown</a></p>
+<h1 id="modern-data-science-for-business">MODERN DATA SCIENCE FOR BUSINESS</h1>
+<p><em>A study of the current business intelligence and related landscapes, prepared by <a href="http://slight.me/">Slight Data Science</a> LLC.</em></p>
 <h2 id="contents">Contents</h2>
 <ol>
-<li>Executive Summary</li>
-<li>Why Data Science?</li>
-<li>Traditional Models and Shortfalls</li>
-<li>Modern Models and Advantages</li>
-<li>The Six Core Business Data Science Competencies</li>
-<li>Current Business Landscape<ol>
-<li>Big Data &amp; Hadoop</li>
-<li>Open vs. Proprietary</li>
-<li>Python vs. R</li>
-<li>Machine Learning</li>
-</ol>
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#2-why-data-science-">Why Data Science?</a></li>
+<li><a href="#3-traditional-bi-models-and-shortfalls">Traditional Models and Shortfalls</a></li>
+<li><a href="#4-modern-models-amp-advantages">Modern Models and Advantages</a></li>
+<li><a href="#5-core-business-data-science-competencies">The Six Core Business Data Science Competencies</a></li>
+<li><a href="#6-current-business-landscape">Current Business Landscape</a><ul>
+<li><a href="#big-data-hadoop">Big Data &amp; Hadoop</a></li>
+<li><a href="#open-vs-proprietary">Open vs. Proprietary</a></li>
+<li><a href="#python-r">Python &amp; R</a></li>
+<li><a href="#machine-learning">Machine Learning</a></li>
+</ul>
 </li>
-<li>Business Implications</li>
-<li>Practical Applications</li>
+<li><a href="#7-business-implications">Business Implications</a></li>
+<li><a href="#8-practical-applications">Practical Applications</a></li>
 </ol>
 <h2 id="1-executive-summary">1. Executive summary</h2>
 <blockquote>
@@ -395,7 +397,7 @@ pre.editor-colors .bracket-matcher .region,
 </ol>
 <p><strong>In fact</strong>, we argue that every business should conduct effective data science in order to remain competitive.</p>
 <p>This report provides the historic context of existing data science applications within business, often commonly referred to within organisations as data-warehousing (DW) (the procurement, sanitization and abstraction) and business intelligence (BI) (the analysis, general consumption and presentation of data). We develop the traditional DW/BI model and explain how advances in hardware and software technology provide cost-effective means of disrupting the foundational assumptions of existing data analytics platforms, both from a technical (IT) and business process orientated perspective. We further explore how these advances increase the consumption and computation of data within business, effectively introducing cost-viable ‘Big-Data’ capabilities. We conclude the study by looking at the total impact of this shift on business resourcing requirements.</p>
-<p>##Recommendations from our team##</p>
+<h2 id="recommendations-from-our-team">Recommendations from our team</h2>
 <p><strong>Firstly,</strong> it is essential for every business wishing to remain competitive to conduct effective data science and analytics techniques. This applies equally to small businesses and large enterprises. It should include at a minimum, analysis of customer behaviour, operational efficiency and optimisation of profits.</p>
 <p><strong>Secondly,</strong> whether developing new business competencies or building on existing ones, the business should include key capabilities in six key defined areas. It is recommended that a minimum level of proficiency be achieved in each of those areas in order to effectively achieve a solution which holistically meets the basic needs of a modern business. That is to say that a total deficiency in any one of the six core areas of expertise renders any BI solution potentially not fit for purpose.</p>
 <p><strong>Thirdly,</strong> solutions should be approached from a vendor neutral perspective with additional preference given to ‘open’ platforms. Such an approach ensures the future-proofing of the data science function, allows agile upgrading and minimises the total cost of ownership. It is recommended that proprietary resources and techniques which cause vendor lock-in and provided restricted compatibility with other modules be avoided where practically possible.</p>
@@ -408,7 +410,7 @@ pre.editor-colors .bracket-matcher .region,
 <p>Although the distinction between DW and BI in practice may be unclear the complete stack of technologies, processes and methodology are relatively well-defined, even if not always well understood or clearly implemented within business. It has not always been necessary from a strategic business perspective for a company to understand academically the data science principals behind the functional process - as long as operationally the components are well defined, properly integrated and a consistent analytical method is used. That said it is clearly advantageous for companies to have analysts, managers and IT professionals conversant in the theory of data science.</p>
 <p>The focus of DW and BI in the past has been technical design integration dealing with a mixture of transactional databases and unstructured data sources. The mixture of data types is partly what makes data science so valuable to businesses, as it is possible to draw on multiple facts to draw new conclusions to steer business decision making. It is not therefore a desire of modern data science to avoid this mixture of data structures, but to handle it in a better fashion. What business impact this has we will come on to shortly. From the business intelligence perspective, the additional challenges of data science traditionally revolve around performance constraints inherent in the DW layer - specifically the speed by which data can be processed, analysed and queried. Modern data science seeks to address these limitations.</p>
 <h3 id="the-traditional-model">The Traditional Model</h3>
-<p>First we describe the traditional data science model as applied to most businesss in order to highlight the weaknesses, afterwards we compare this against the modern model to underline the advantages to be gained from newer ways of working (and thinking).</p>
+<p>First we describe the traditional data science model as applied to most businesses in order to highlight the weaknesses, afterwards we compare this against the modern model to underline the advantages to be gained from newer ways of working (and thinking).</p>
 <p><img src="/Users/mattslight/Dev/slightme/public_html/whitepaper/img/traditional-model.png" alt="A Traditional Data Science model" title="A Traditional Data Science model"></p>
 <p>The traditional model essentially comprises a thick DW backend. This is usually large traditional dedicated database, not distributed and often row based data store. The data warehouse store is the first stage intermediary store, essentially a waiting space sitting before data-marts and/or cubes which are designed to be queried against. Each data-mart or cube must be carefully crafted for the function to which it is designed and generally is not all-purpose for open analysis. The number of dimensions and the computational power of these data-marts and cubes is relatively lower than the modern distributed counterparts, unless employing specialist hardware. Sitting between the source data and the DW backend is a thick ETL layer, which is responsible for fetching data from sources, transposing to a standard format and loading into a data warehouse. And the right hand side of the model is the BI layer which performs on-line analysis (OLAP), reporting, dashboard creation, and other final preparations before the data is consumed. At the far right of the model are client applications for displaying analysis and performing a small degree of data manipulation.</p>
 <p>Although the model appears simple enough in terms of the architecture and overall component integration the shortfalls are apparent and many:-</p>
@@ -665,6 +667,6 @@ Analysis tools are becoming widely available with many being offered at free or 
 </tbody>
 </table>
 <blockquote>
-<p><strong>UPDATE NOTE</strong> - For an up-to-date landscape poster of the vendors in the modern data science space – please visit <a href="http://slight.me/data-science-vendor-landscape">http://slight.me/data-science-vendor-landscape</a> </p>
+<p><strong>UPDATE NOTE</strong> - For an up-to-date landscape poster of the vendors in the modern data science space – please visit <a href="http://slight.me/data-science-vendor-landscape">http://slight.me/data-science-vendor-landscape</a></p>
 </blockquote></body>
 </html>

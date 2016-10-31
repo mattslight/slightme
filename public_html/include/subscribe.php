@@ -50,7 +50,11 @@ if( isset( $email ) AND $email != '' ) {
 	if ( isset( $data->status ) AND $data->status == 'subscribed' ){
 		echo '{ "alert": "success", "message": "Thank you for your interest. Please check your email to <strong>download</strong> our whitepaper. Please also check your junk / spam." }';
 	} else {
-		echo '{ "alert": "error", "message": "' . $data->title . '" }';
+		if ( isset( $data->title ) AND $data->title == 'Member Exists'){
+			echo '{ "alert": "error", "message": "That email address is already subscribed. Please use another address." }';
+		} else {
+			echo '{ "alert": "error", "message": "' . $data->title . '" }';
+		}
 	}
 
 }
