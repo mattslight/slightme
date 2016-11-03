@@ -10,7 +10,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700italic|Poppins:300,400,500,600,700" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.min.css" type="text/css" />
 
 	<!-- One Page Module Specific Stylesheet -->
 	<link rel="stylesheet" href="css/onepage.css" type="text/css" />
@@ -22,10 +22,7 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 	<link rel="stylesheet" href="css/components/radio-checkbox.css" type="text/css" />
-	<link rel="stylesheet" href="css/fonts.css" type="text/css" />]
-
-	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
-
+	<link rel="stylesheet" href="css/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lt IE 9]>
@@ -68,7 +65,7 @@
 						<ul class="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
 							<li><a href="#" data-ref="#wapper"><div>Home</div></a></li>
 							<li><a href="#" data-href="#section-about" data-offset="60"><div>About</div></a></li>
-							<li><a href="#" data-href="#section-woks"><div>Works</div></a></li>
+							<li><a href="#" data-href="#section-works"><div>Works</div></a></li>
 							<li><a href="#" data-href="#section-services"><div>Services</div></a></li>
 							<li><a href="#" data-href="#section-principals"><div>Principals</div></a></li>
 							<li><a href="#" data-href="#section-contact"><div>Contact</div></a></li>
@@ -84,9 +81,36 @@
 
 		</header><!-- #header end -->
 
+		<!-- Dots menu
+		============================================= -->
+		<div id="page-menu" class="dots-menu" style="margin-top: -89px;">
+
+					<div id="page-menu-wrap">
+
+						<div class="container clearfix">
+
+							<nav class="one-page-menu no-offset">
+								<ul>
+									<li class="current"><a href="#" data-href="#header"><div>Home</div></a></li>
+									<li class=""><a href="#" data-href="#section-about"><div>About</div></a></li>
+									<li class=""><a href="#" data-href="#section-works"><div>Works</div></a></li>
+									<li class=""><a href="#" data-href="#section-services"><div>Services</div></a></li>
+									<li class=""><a href="#" data-href="#section-principals"><div>Principals</div></a></li>
+									<li class=""><a href="#" data-href="#section-contact"><div>Contact</div></a></li>
+								</ul>
+							</nav>
+
+						<div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+
+						</div>
+
+					</div>
+
+				</div><!-- dots menu end -->
+
 		<!-- Slider
 		============================================= -->
-		
+
 
 		<section id="slider" class="slider-parallax full-screen">
 			<div class="slider-parallax-inner">
@@ -95,12 +119,17 @@
 						<div class="emphasis-title bottommargin">
 							<h1><strong>Unlock Your Data </strong><span class="font-secondary ls1"><em>Potential</em></span></h1>
 						</div>
-						<p class="lead center divcenter bottommargin-lg" style="max-width: 900px; font-size: 24px;">Make decisons <span class="color t500"><em>faster</em></span>, by <strong style="border-bottom: 1px dashed #000;">using data you already own</strong> <span class="font-secondary">&amp;</span> curating what you don't. <span class="color t500"><em>Without</em></span> the need for big investment.</p>
+						<p class="lead center divcenter bottommargin-lg t100 subhead">
+							Make decisons <span class="color t500 font-secondary"><em>faster</em></span>,
+							by <strong>using data you already own</strong> <span class="font-secondary">&amp;</span>
+							curating what you don't. <span class="color t500 font-secondary">
+							<em>Without</em></span> the need for big investment.
+						</p>
 					  <a href="#" class="button button-circle" data-scrollto="#section-contact-form" data-easing="easeInOutExpo" data-speed="1250">Request Presentation</a>
 						<span class="hidden-xs rightmargin-sm"></span>
 						<a href="#" class="button button-circle button-white button-light" data-scrollto="#content" data-easing="easeInOutExpo" data-speed="1250">Read More</a>
 					</div>
-				</div>				
+				</div>
 				<a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="70" class="one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
 			</div>
 		</section><!-- #slider end -->
@@ -113,7 +142,7 @@
 					<div class="container clearfix">
 						<h2 class="logo-large"><strong>slight</strong><em class="t300">data</em></h2>
 						<h2 class="divcenter bottommargin font-body t300" style="max-width: 700px;">We are the Middle East's <span class="font-secondary ls1 t300"><em>Leading</em></span> <strong>Data Science</strong> <span class="font-secondary nocolor">&amp;</span> <strong>Big Data</strong> Consultancy</h2>
-						<p class="lead divcenter bottommargin" style="max-width: 800px;">We use modern data science techniques and open-source technology to provide beautifully simple insights into data. </p>
+						<p class="divcenter bottommargin subhead-pg2">We use modern data science techniques and open-source technology to provide beautifully simple insights into data. </p>
 						<p class="bottommargin" style="font-size: 16px;"><a href="#" data-scrollto="#section-services" data-easing="easeInOutExpo" data-speed="1250" data-offset="70" class="more-link">Our Services <i class="icon-angle-right"></i></a></p>
 						<div class="clear"></div>
 					</div>
@@ -351,7 +380,7 @@
 													</div>
 												</div>
 											</div>
-											
+
 										</div>
 									</div>
 								</div>
@@ -406,14 +435,11 @@
 							<div class="center">
 								<h2 class="title-contact color">Get in Touch</h2>
 							</div>
+
 							<div class="contact-widget">
-
 								<div class="contact-form-result"></div>
-
 								<form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
-
 									<div class="form-process"></div>
-
 									<div class="col_half">
 										<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Name*" />
 									</div>
@@ -424,7 +450,7 @@
 									<div class="clear"></div>
 
 									<div class="col_one_third altbfc">
-										<p class="border-form-control ">Company Employee Size:</p>
+										<p class="border-form-control ">Company Employees:</p>
 									</div>
 
 									<div class="col_two_third col_last">
@@ -450,7 +476,6 @@
   										<input type="checkbox" id="cb_int_4" name="interests" value="visulisations" class="checkbox-style" /><label for="cb_int_4" class="checkbox-style-3-label">Visualisation</label>
   										<input type="checkbox" id="cb_int_5" name="interests" value="big_data" class="checkbox-style" /><label for="cb_int_5" class="checkbox-style-3-label">Big Data (incl. Hadoop)</label>
   										<input type="checkbox" id="cb_int_6" name="interests" value="other" class="checkbox-style" /><label for="cb_int_6" class="checkbox-style-3-label">Other</label>
-  										
 									</div>
 
 									<div class="col_full center">
@@ -462,34 +487,20 @@
 									<div class="col_full hidden">
 										<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
 									</div>
-
 								</form>
-
 							</div>
-
 						</div>
-
 					</div>
-
 				</div>
-
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- #modal onload end -->
 		<section id="content">
 
-			<div class="content-wrap">
-
 				<div class="container clearfix">
 
-					<div class="center">
-						<a href="#myModal1" data-lightbox="inline" class="button button-large button-rounded">Trigger Modal</a>
-						<div class="line"></div>
-					</div>
-
-					<div class="modal-on-load #enable-cookie" data-target="#myModal1"></div>
+					<div class="modal-on-load enable-cookie" data-target="#myModal1"></div>
 
 					<!-- Modal -->
 					<div class="modal1 mfp-hide subscribe-widget" id="myModal1">
@@ -503,15 +514,14 @@
 								<form class="widget-subscribe-form2" action="include/subscribe.php" role="form" method="post" style="max-width: 350px;">
 									<input type="email" id="widget-subscribe-form2-email" name="widget-subscribe-form-email" class="form-control input-lg not-dark required email" placeholder="Enter your Email">
 									<button class="button button-large button-rounded noleftmargin" type="submit" style="margin-top:15px;">Download</button>
-								</form>	
+									<button class="button button-dark button-small button-rounded noleftmargin" style="margin-top:15px;" onClick="$.magnificPopup.close();">No Thanks</button>
+								</form>
 								<p class="nobottommargin"><small><em>*We hate Spam &amp; Junk Emails.</em></small></p>
 							</div>
 						</div>
 					</div>
 
 				</div>
-
-			</div>
 
 		</section>
 
@@ -544,7 +554,7 @@
 						<div class="col-md-4">
 
 							<div class="widget subscribe-widget clearfix" data-loader="button">
-								<h4>Subscribe</h4>
+								<h4>Newsletter</h4>
 
 								<div class="widget-subscribe-form-result"></div>
 								<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
@@ -552,22 +562,15 @@
 									<button class="button button-border button-circle button-light topmargin-sm" type="submit">Subscribe Now</button>
 								</form>
 							</div>
-
 						</div>
 
 						<div class="col-md-4">
-
 							<div class="widget clearfix">
 								<h4>Contact</h4>
-
-								<p class="lead">1 Burj Khalifa, Downtown Dubai<br>United Arab Emirates, PO BOX 90120</p>
-
+								<p>1 Burj Khalifa, Downtown Dubai<br>United Arab Emirates, PO BOX 90120</p>
 							</div>
-
 						</div>
-
 					</div>
-
 				</div>
 			</div>
 

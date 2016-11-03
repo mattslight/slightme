@@ -663,6 +663,7 @@
 	body:not(.sticky-responsive-pagemenu) #page-menu #page-menu-wrap {
 		position: relative !important;
 		top: 0 !important;
+		display: none;
 	}
 
 	#page-submenu-trigger {
@@ -1849,4 +1850,3 @@ only screen and (                min-resolution: 2dppx) and (max-width: 991px) {
 	#logo a.standard-logo { display: none; }
 	#logo a.retina-logo { display: inline-block; }
 }
-
